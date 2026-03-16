@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Serviços | EFICAZZ Soluções Contábeis Estratégicas</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f2f4f',
+                            primary: '#1c4e80',
+                            light: '#f0f9ff',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .gradient-text-blue {
+            background: linear-gradient(to right, #1c4e80, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .service-card:hover .service-icon {
+            transform: scale(1.1) rotate(5deg);
+            background-color: #1c4e80;
+            color: white;
+        }
+        @keyframes pulse-wpp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .wpp-btn { animation: pulse-wpp 2s infinite; }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-700 antialiased overflow-x-hidden">
+
+    <a href="https://wa.me/5511999999999" target="_blank" class="wpp-btn fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-[#20ba59] transition duration-300">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <header class="fixed w-full top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3 cursor-pointer">
+                <img src="../img/EFICAZ SIMBOLO AZUL.png" alt="Eficazz Logo" class="h-10" onerror="this.src='https://via.placeholder.com/40x40/1c4e80/ffffff?text=E'">
+                <span class="font-heading font-bold text-brand-dark text-2xl tracking-tight uppercase">EFICAZZ</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium items-center">
+                <a href="index.html" class="text-gray-500 hover:text-brand-primary transition">Início</a>
+                <a href="sobre.html" class="text-gray-500 hover:text-brand-primary transition">Sobre</a>
+                <a href="servicos.html" class="text-brand-primary font-semibold border-b-2 border-brand-primary">Serviços</a>
+                <a href="blog.html" class="text-gray-500 hover:text-brand-primary transition">Blog</a>
+                <a href="contato.html" class="bg-brand-primary text-white px-6 py-2 rounded-full shadow-lg hover:shadow-brand-primary/50 hover:-translate-y-0.5 transition-all">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="pt-44 pb-20 bg-gradient-to-b from-brand-light to-gray-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <span class="text-brand-primary font-bold tracking-widest uppercase text-sm" data-aos="fade-up">Nosso Ecossistema</span>
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold text-brand-dark mt-4 mb-6" data-aos="fade-up" data-aos-delay="100">
+                Soluções <span class="gradient-text-blue">Estratégicas</span> Sob Medida
+            </h1>
+            <p class="max-w-2xl mx-auto text-gray-500 text-lg md:text-xl leading-relaxed" data-aos="fade-up" data-aos-delay="200">
+                Independentemente do momento da sua empresa — abertura, escala ou organização — temos o expertise necessário para elevar seu nível de gestão.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <div class="service-card group bg-white p-10 rounded-[2.5rem] shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100 hover:border-brand-primary/30 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-icon w-16 h-16 bg-blue-50 text-brand-primary rounded-2xl flex items-center justify-center text-3xl mb-8 transition-all duration-500">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <h3 class="font-heading text-2xl font-bold text-brand-dark mb-4">Abertura de Empresa</h3>
+                <p class="text-gray-500 mb-8 leading-relaxed">Comece com segurança e planejamento tributário adequado desde o primeiro dia. Reduza custos desnecessários na origem.</p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center gap-3 text-sm font-medium"><i class="fa-solid fa-circle-check text-green-500"></i> Estudo de viabilidade gratuita</li>
+                    <li class="flex items-center gap-3 text-sm font-medium"><i class="fa-solid fa-circle-check text-green-500"></i> Registro rápido em todos órgãos</li>
+                    <li class="flex items-center gap-3 text-sm font-medium"><i class="fa-solid fa-circle-check text-green-500"></i> Escolha do melhor CNAE</li>
+                </ul>
+                <a href="https://wa.me/5511999999999" class="font-bold text-brand-primary group-hover:underline inline-flex items-center">Quero abrir meu CNPJ <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+            </div>
+
+            <div class="service-card group bg-white p-10 rounded-[2.5rem] shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100 hover:border-brand-primary/30 transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+                <div class="service-icon w-16 h-16 bg-blue-50 text-brand-primary rounded-2xl flex items-center justify-center text-3xl mb-8 transition-all duration-500">
+                    <i class="fa-solid fa-chart-pie"></i>
+                </div>
+                <h3 class="font-heading text-2xl font-bold text-brand-dark mb-4">Gestão & Assessoria</h3>
+                <p class="text-gray-500 mb-8 leading-relaxed">Contabilidade completa com foco em conformidade fiscal rigorosa e suporte premium na tomada de decisões.</p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center gap-3 text-sm font-medium"><i class="fa-solid fa-circle-check text-green-500"></i> Escrituração 100% digital</li>
+                    <li class="flex items-center gap-3 text-sm font-medium"><i class="fa-solid fa-circle-check text-green-500"></i> Entrega de obrigações em dia</li>
+                    <li class="flex items-center gap-3 text-sm font-medium"><i class="fa-solid fa-circle-check text-green-500"></i> Dashboards de resultados</li>
+                </ul>
+                <a href="https://wa.me/5511999999999" class="font-bold text-brand-primary group-hover:underline inline-flex items-center">Saiba mais <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+            </div>
+
+            <div class="service-card group bg-white p-10 rounded-[2.5rem] shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100 hover:border-brand-primary/30 transition-all duration-500" data-aos="fade-up" data-aos-delay="300">
+                <div class="service-icon w-16 h-16 bg-blue-50 text-brand-primary rounded-2xl flex items-center justify-center text-3xl mb-8 transition-all duration-500">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                </div>
+                <h3 class="font-heading text-2xl font-bold text-brand-dark mb-4">Engenharia Tributária</h3>
+                <p class="text-gray-500 mb-8 leading-relaxed">Estratégias avançadas e legais para reduzir sua carga de impostos e turbinar seu fluxo de caixa mensal.</p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center gap-3 text-sm font-medium"><i class="fa-solid fa-circle-check text-green-500"></i> Revisão dos últimos 5 anos</li>
+                    <li class="flex items-center gap-3 text-sm font-medium"><i class="fa-solid fa-circle-check text-green-500"></i> Simulações de regimes (Lucro Real)</li>
+                    <li class="flex items-center gap-3 text-sm font-medium"><i class="fa-solid fa-circle-check text-green-500"></i> Recuperação de créditos</li>
+                </ul>
+                <a href="https://wa.me/5511999999999" class="font-bold text-brand-primary group-hover:underline inline-flex items-center">Otimizar meus impostos <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+            </div>
+
+            <div class="service-card group bg-white p-10 rounded-[2.5rem] shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100 hover:border-brand-primary/30 transition-all duration-500" data-aos="fade-up" data-aos-delay="400">
+                <div class="service-icon w-16 h-16 bg-blue-50 text-brand-primary rounded-2xl flex items-center justify-center text-3xl mb-8 transition-all duration-500">
+                    <i class="fa-solid fa-file-shield"></i>
+                </div>
+                <h3 class="font-heading text-2xl font-bold text-brand-dark mb-4">Blindagem & Regularização</h3>
+                <p class="text-gray-500 mb-8 leading-relaxed">Resolvemos pendências fiscais críticas e reorganizamos sua contabilidade para evitar multas pesadas.</p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-center gap-3 text-sm font-medium"><i class="fa-solid fa-circle-check text-green-500"></i> Parcelamentos estratégicos</li>
+                    <li class="flex items-center gap-3 text-sm font-medium"><i class="fa-solid fa-circle-check text-green-500"></i> Reativação de CNPJ inapto</li>
+                    <li class="flex items-center gap-3 text-sm font-medium"><i class="fa-solid fa-circle-check text-green-500"></i> Auditoria de anos anteriores</li>
+                </ul>
+                <a href="https://wa.me/5511999999999" class="font-bold text-brand-primary group-hover:underline inline-flex items-center">Regularizar meu negócio <i class="fa-solid fa-arrow-right ml-2 text-xs"></i></a>
+            </div>
+
+            <div class="lg:col-span-2 service-card group bg-brand-dark p-10 rounded-[2.5rem] shadow-2xl relative overflow-hidden" data-aos="fade-up" data-aos-delay="500">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-brand-primary/20 blur-[100px] rounded-full"></div>
+                <div class="relative z-10 flex flex-col md:flex-row gap-8 items-center">
+                    <div class="md:w-2/3">
+                        <div class="w-16 h-16 bg-white/10 text-white rounded-2xl flex items-center justify-center text-3xl mb-8">
+                            <i class="fa-solid fa-brain"></i>
+                        </div>
+                        <h3 class="font-heading text-3xl font-bold text-white mb-4">Consultoria Estratégica & BPO</h3>
+                        <p class="text-gray-400 mb-8 text-lg leading-relaxed">Orientação para empresários que buscam escala. Atuamos como seu departamento financeiro externo e conselheiros de expansão.</p>
+                        <ul class="grid md:grid-cols-2 gap-4 text-white/80 mb-8">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-brand-primary"></i> Estudo de Viabilidade</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-brand-primary"></i> BPO Financeiro Completo</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-brand-primary"></i> Planejamento Societário</li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-chevron-right text-brand-primary"></i> Valuations & Fusões</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/3 flex justify-center">
+                        <a href="contato.html" class="bg-white text-brand-dark px-8 py-5 rounded-2xl font-bold hover:scale-105 transition shadow-xl text-center">
+                            Solicitar Proposta <br> <span class="text-xs font-normal opacity-70">Personalizada</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-heading text-3xl font-bold text-brand-dark text-center mb-12">Dúvidas Frequentes</h2>
+            <div class="space-y-4">
+                <details class="group bg-gray-50 rounded-2xl p-6 border border-gray-100 open:bg-white open:shadow-lg transition-all">
+                    <summary class="font-bold text-lg list-none cursor-pointer flex justify-between items-center text-brand-dark">
+                        Quanto tempo demora para abrir minha empresa?
+                        <span class="group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="mt-4 text-gray-500 leading-relaxed">Nosso processo é acelerado via digital. Em média, capitais levam de 3 a 7 dias úteis após a assinatura dos documentos.</p>
+                </details>
+
+                <details class="group bg-gray-50 rounded-2xl p-6 border border-gray-100 open:bg-white open:shadow-lg transition-all">
+                    <summary class="font-bold text-lg list-none cursor-pointer flex justify-between items-center text-brand-dark">
+                        Como funciona a troca de contador para a Eficazz?
+                        <span class="group-open:rotate-180 transition-transform"><i class="fa-solid fa-chevron-down"></i></span>
+                    </summary>
+                    <p class="mt-4 text-gray-500 leading-relaxed">É 100% transparente. Nós cuidamos de toda a transição burocrática junto ao seu contador anterior. Você não precisa se preocupar com nada.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-gray-300 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center space-x-3 mb-6">
+                    <img src="../img/EFICAZ SIMBOLO BRANCO.png" class="h-8 brightness-0 invert" alt="Logo" onerror="this.src='https://via.placeholder.com/40x40/ffffff/0f2f4f?text=E'">
+                    <span class="font-heading font-bold text-white text-xl">EFICAZZ</span>
+                </div>
+                <p class="text-sm text-gray-400 leading-relaxed">Soluções contábeis de alto nível para quem não se contenta com o básico.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Menu</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-white">Início</a></li>
+                    <li><a href="sobre.html" class="hover:text-white">Sobre</a></li>
+                    <li><a href="servicos.html" class="text-white">Serviços</a></li>
+                    <li><a href="contato.html" class="hover:text-white">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Social</h4>
+                <div class="flex space-x-4">
+                    <a href="#" class="hover:text-white text-xl transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="hover:text-white text-xl transition-colors"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">Contato</h4>
+                <p class="text-sm">contato@eficazz.com.br</p>
+                <p class="text-sm mt-2">(11) 3000-0000</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 border-t border-white/10 pt-8 text-center text-xs text-gray-500">
+            © 2026 EFICAZZ Soluções Contábeis.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 800 });
+    </script>
+</body>
+
+</html>

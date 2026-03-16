@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sobre Nós | EFICAZZ Soluções Contábeis Premium</title>
+    <meta name="description" content="Conheça a EFICAZZ, uma contabilidade moderna e estratégica focada no crescimento e segurança fiscal da sua empresa.">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f2f4f',
+                            primary: '#1c4e80',
+                            light: '#e0f2fe',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #60a5fa, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .gradient-text-blue {
+            background: linear-gradient(to right, #1c4e80, #3b82f6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @keyframes pulse-wpp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .wpp-btn { animation: pulse-wpp 2s infinite; }
+        
+        /* Pattern sutil de fundo */
+        .bg-pattern {
+            background-image: radial-gradient(#1c4e80 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-700 antialiased overflow-x-hidden">
+
+    <a href="https://wa.me/5511999999999" target="_blank" class="wpp-btn fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-[#20ba59] transition duration-300">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <header class="fixed w-full top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3 cursor-pointer">
+                <img src="../img/EFICAZ SIMBOLO AZUL.png" alt="Eficazz Logo" class="h-10" onerror="this.src='https://via.placeholder.com/40x40/1c4e80/ffffff?text=E'">
+                <span class="font-heading font-bold text-brand-dark text-2xl tracking-tight">EFICAZZ</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium items-center">
+                <a href="index.html" class="text-gray-500 hover:text-brand-primary transition">Início</a>
+                <a href="sobre.html" class="text-brand-primary font-semibold">Sobre</a>
+                <a href="servicos.html" class="text-gray-500 hover:text-brand-primary transition">Serviços</a>
+                <a href="blog.html" class="text-gray-500 hover:text-brand-primary transition">Blog</a>
+                <a href="contato.html" class="bg-brand-primary text-white px-6 py-2 rounded-full shadow-lg hover:shadow-brand-primary/50 hover:-translate-y-0.5 transition-all">Portal do Cliente <i class="fa-solid fa-arrow-right ml-2 text-sm"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="relative bg-brand-dark text-white pt-48 pb-32 overflow-hidden text-center">
+        <div class="absolute inset-0 z-0 bg-pattern opacity-10"></div>
+        <div class="absolute top-[-50%] left-[-10%] w-[600px] h-[600px] rounded-full bg-blue-600/20 blur-[120px] pointer-events-none"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 relative z-10" data-aos="zoom-in" data-aos-duration="1000">
+            <span class="text-blue-300 font-bold tracking-widest uppercase text-sm mb-4 block">Nossa História</span>
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                Mais que contadores, <span class="gradient-text">parceiros de negócios.</span>
+            </h1>
+            <p class="text-gray-300 text-lg md:text-xl leading-relaxed max-w-3xl mx-auto">
+                Uma contabilidade moderna, estratégica e próxima do empresário, focada em crescimento sustentável e blindagem fiscal.
+            </p>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+            
+            <div class="relative" data-aos="fade-right">
+                <div class="relative rounded-3xl overflow-hidden shadow-2xl">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=800&auto=format&fit=crop" alt="Equipe Eficazz" class="w-full h-[500px] object-cover hover:scale-105 transition duration-700">
+                    <div class="absolute inset-0 bg-gradient-to-t from-brand-dark/80 to-transparent"></div>
+                </div>
+                <div class="absolute -bottom-8 -right-8 bg-brand-primary text-white p-8 rounded-2xl shadow-xl hidden md:block" data-aos="fade-up" data-aos-delay="300">
+                    <h3 class="font-heading text-4xl font-bold mb-1">100%</h3>
+                    <p class="text-blue-200 text-sm font-medium">Compromisso com o<br>seu resultado</p>
+                </div>
+            </div>
+
+            <div data-aos="fade-left">
+                <span class="text-brand-primary font-bold tracking-wider uppercase text-sm">O Propósito EFICAZZ</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-dark mt-2 mb-8">
+                    Transformando a visão tradicional da contabilidade
+                </h2>
+                <div class="space-y-6 text-gray-600 leading-relaxed text-lg">
+                    <p>
+                        A <strong>EFICAZZ Soluções Contábeis</strong> nasceu com uma missão clara: revolucionar a forma como os empresários encaram o setor contábil. Deixamos de ser apenas "geradores de guias" para atuar como o braço direito da sua diretoria.
+                    </p>
+                    <p>
+                        Unimos o profundo conhecimento técnico das legislações vigentes à alta tecnologia e inteligência de dados. O resultado? Um atendimento próximo, que antecipa problemas, gera economia tributária real e oferece suporte ágil à tomada de decisões estratégicas.
+                    </p>
+                </div>
+                
+                <div class="mt-10 flex gap-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-brand-primary text-xl"><i class="fa-solid fa-check-double"></i></div>
+                        <span class="font-bold text-brand-dark">Segurança</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-full bg-blue-50 flex items-center justify-center text-brand-primary text-xl"><i class="fa-solid fa-chart-line"></i></div>
+                        <span class="font-bold text-brand-dark">Eficiência</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-50 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-brand-light/30 skew-x-12 translate-x-32 z-0"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-dark">Nosso DNA Corporativo</h2>
+                <p class="text-gray-500 mt-4">Os pilares que sustentam nosso trabalho diário e garantem a entrega de resultados excepcionais.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.05)] border-t-4 border-brand-primary hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-16 h-16 bg-brand-light text-brand-primary rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fa-solid fa-bullseye"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-brand-dark mb-4">Missão</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Oferecer soluções contábeis estratégicas de alto padrão que promovam segurança jurídica, economia tributária e o crescimento sustentável para nossos clientes.
+                    </p>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.05)] border-t-4 border-brand-dark hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-16 h-16 bg-brand-light text-brand-dark rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fa-solid fa-eye"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-brand-dark mb-4">Visão</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Ser reconhecida nacionalmente como a principal referência em contabilidade estratégica, digital e consultiva para PMEs que buscam escalabilidade estruturada.
+                    </p>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl shadow-[0_10px_40px_rgba(0,0,0,0.05)] border-t-4 border-blue-400 hover:-translate-y-2 transition-transform duration-300" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-16 h-16 bg-brand-light text-blue-500 rounded-2xl flex items-center justify-center text-3xl mb-6">
+                        <i class="fa-solid fa-gem"></i>
+                    </div>
+                    <h3 class="font-heading text-2xl font-bold text-brand-dark mb-4">Valores</h3>
+                    <ul class="space-y-3 text-gray-600 font-medium">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary text-sm"></i> Ética Inegociável</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary text-sm"></i> Transparência Total</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary text-sm"></i> Inovação Constante</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-primary text-sm"></i> Foco no Sucesso do Cliente</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center">
+            
+            <div class="md:col-span-5 relative" data-aos="fade-right">
+                <div class="absolute -inset-4 bg-brand-light rounded-[3rem] -rotate-6 z-0"></div>
+                <img src="../img/socio_sobre.jpg" alt="Aprígio Neto contador e fundador" class="relative z-10 w-full h-auto rounded-[2rem] shadow-2xl object-cover" onerror="this.src='https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=600&auto=format&fit=crop'">
+                
+                <div class="absolute bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg z-20 flex items-center gap-4 border border-gray-100" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="bg-brand-dark text-white w-10 h-10 rounded-full flex items-center justify-center"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <div>
+                        <p class="text-xs font-bold text-gray-400 uppercase">Especialista</p>
+                        <p class="font-heading font-bold text-brand-dark text-sm">Gestão Tributária</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="md:col-span-7 md:pl-8" data-aos="fade-left">
+                <div class="flex items-center gap-4 mb-4">
+                    <div class="h-px bg-brand-primary w-12"></div>
+                    <span class="text-brand-primary font-bold tracking-wider uppercase text-sm">A Liderança</span>
+                </div>
+                
+                <h2 class="font-heading text-4xl font-bold text-brand-dark mb-2">Aprígio Neto</h2>
+                <p class="text-xl text-gray-500 mb-8 font-medium">Fundador & Head de Estratégia</p>
+
+                <div class="space-y-5 text-gray-600 leading-relaxed">
+                    <p>
+                        Contador formado em Ciências Contábeis desde 2014, Aprígio Neto lidera a EFICAZZ com foco incansável na excelência técnica, estruturação empresarial e proximidade real com cada cliente.
+                    </p>
+                    <p>
+                        Sua trajetória acadêmica e profissional inclui sólidas especializações em <strong>Auditoria e Controladoria</strong>, <strong>Gestão Fiscal e Tributária</strong>, além de <strong>Gestão Empresarial</strong>. Essa bagagem multidisciplinar permite que ele reúna o melhor da técnica contábil com a visão macro do homem de negócios.
+                    </p>
+                    
+                    <blockquote class="bg-gray-50 border-l-4 border-brand-primary p-6 rounded-r-2xl italic text-gray-700 font-medium my-8">
+                        "Nossa atuação não se baseia em apenas cumprir prazos do governo. Nosso verdadeiro trabalho é desenvolver soluções financeiras inteligentes para minimizar os riscos e maximizar os lucros do empresário brasileiro."
+                    </blockquote>
+                </div>
+
+                <div class="mt-8 flex gap-4">
+                    <a href="https://linkedin.com" target="_blank" class="w-10 h-10 rounded-full bg-brand-dark text-white flex items-center justify-center hover:bg-brand-primary hover:-translate-y-1 transition-all"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:aprigio@eficazz.com.br" class="w-10 h-10 rounded-full bg-brand-dark text-white flex items-center justify-center hover:bg-brand-primary hover:-translate-y-1 transition-all"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-dark text-white relative">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="font-heading text-3xl md:text-4xl font-bold mb-16 text-center" data-aos="fade-up">
+                O que nos torna <span class="gradient-text">diferentes?</span>
+            </h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors backdrop-blur-sm" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-brand-primary rounded-xl flex items-center justify-center text-2xl mb-6 shadow-lg">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3">Atendimento Premium</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Cada cliente é único. Atendimento humanizado, sem robôs, diretamente com consultores estratégicos experientes.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors backdrop-blur-sm" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-brand-primary rounded-xl flex items-center justify-center text-2xl mb-6 shadow-lg">
+                        <i class="fa-solid fa-chess-knight"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3">Inteligência Tributária</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Análise constante de cenários e enquadramentos fiscais para garantir que você pague apenas o imposto estritamente necessário.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors backdrop-blur-sm" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-brand-primary rounded-xl flex items-center justify-center text-2xl mb-6 shadow-lg">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3">Tecnologia de Ponta</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Sistemas em nuvem, integrações financeiras e envio automático de documentos. Menos burocracia, mais velocidade.
+                    </p>
+                </div>
+
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl hover:bg-white/10 transition-colors backdrop-blur-sm" data-aos="fade-up" data-aos-delay="400">
+                    <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-brand-primary rounded-xl flex items-center justify-center text-2xl mb-6 shadow-lg">
+                        <i class="fa-solid fa-scale-balanced"></i>
+                    </div>
+                    <h3 class="font-heading text-xl font-bold mb-3">Transparência 360º</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Acesso total aos seus relatórios, clareza nas informações e responsabilidade técnica integral garantida pela EFICAZZ.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-brand-primary relative overflow-hidden py-24">
+        <div class="absolute inset-0 opacity-10" style="background-image: radial-gradient(#ffffff 2px, transparent 2px); background-size: 30px 30px;"></div>
+        
+        <div class="max-w-4xl mx-auto px-6 text-center relative z-10" data-aos="zoom-in">
+            <h2 class="font-heading text-4xl md:text-5xl font-bold text-white mb-6">
+                Pronto para ter uma contabilidade de elite?
+            </h2>
+            <p class="text-blue-100 mb-10 text-lg">
+                Dê o próximo passo. Converse com nossa equipe e descubra o plano ideal para blindar e tracionar o seu negócio.
+            </p>
+            <a href="contato.html" class="inline-block bg-white text-brand-primary px-10 py-4 rounded-xl font-bold text-lg hover:bg-gray-100 shadow-[0_10px_30px_rgba(0,0,0,0.2)] hover:shadow-[0_15px_40px_rgba(255,255,255,0.3)] hover:-translate-y-1 transition-all duration-300">
+                <i class="fa-solid fa-calendar-check mr-2 text-brand-primary"></i> Agendar Reunião Diagnóstica
+            </a>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-gray-300 pt-20 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
+            <div>
+                <div class="flex items-center space-x-3 mb-6">
+                    <img src="../img/EFICAZ SIMBOLO BRANCO.png" class="h-8 brightness-0 invert" alt="Logo" onerror="this.src='https://via.placeholder.com/40x40/ffffff/0f2f4f?text=E'">
+                    <span class="font-heading font-bold text-white text-xl">EFICAZZ</span>
+                </div>
+                <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+                    Contabilidade consultiva e estratégica focada no crescimento e na segurança jurídica da sua empresa.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold text-white mb-6 uppercase tracking-wider text-sm">Institucional</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="index.html" class="hover:text-brand-light transition-colors">Início</a></li>
+                    <li><a href="sobre.html" class="text-brand-light">Quem Somos</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Soluções</a></li>
+                    <li><a href="blog.html" class="hover:text-brand-light transition-colors">Blog & Artigos</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold text-white mb-6 uppercase tracking-wider text-sm">Principais Serviços</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-brand-light transition-colors">Abertura de Empresa</a></li>
+                    <li><a href="#" class="hover:text-brand-light transition-colors">Troca de Contador</a></li>
+                    <li><a href="#" class="hover:text-brand-light transition-colors">BPO Financeiro</a></li>
+                    <li><a href="#" class="hover:text-brand-light transition-colors">Consultoria Tributária</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold text-white mb-6 uppercase tracking-wider text-sm">Fale Conosco</h4>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot mt-1 text-brand-primary"></i>
+                        <span>Av. Paulista, 1000 - Bela Vista<br>São Paulo - SP, 01310-100</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-brand-primary"></i>
+                        <span>(11) 3000-0000</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-brand-primary"></i>
+                        <span>contato@eficazz.com.br</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+            <p>&copy; 2026 EFICAZZ Soluções Contábeis. Todos os direitos reservados.</p>
+            <div class="mt-4 md:mt-0 space-x-4">
+                <a href="#" class="hover:text-white">Política de Privacidade</a>
+                <a href="#" class="hover:text-white">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+        });
+    </script>
+</body>
+</html>

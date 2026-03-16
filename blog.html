@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog & Inteligência Fiscal | EFICAZZ</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f2f4f',
+                            primary: '#1c4e80',
+                            light: '#f0f9ff',
+                            accent: '#3b82f6'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <style>
+        .blog-card:hover .blog-image {
+            transform: scale(1.1);
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #60a5fa, #1c4e80);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        @keyframes pulse-wpp {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        .wpp-btn { animation: pulse-wpp 2s infinite; }
+    </style>
+</head>
+
+<body class="bg-gray-50 text-gray-700 antialiased overflow-x-hidden">
+
+    <a href="https://wa.me/5583999622071" target="_blank" class="wpp-btn fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-[#20ba59] transition duration-300">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <header class="fixed w-full top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3 cursor-pointer">
+                <img src="../img/EFICAZ SIMBOLO AZUL.png" alt="Eficazz Logo" class="h-10" onerror="this.src='https://via.placeholder.com/40x40/1c4e80/ffffff?text=E'">
+                <span class="font-heading font-bold text-brand-dark text-2xl tracking-tight uppercase">EFICAZZ</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium items-center">
+                <a href="index.html" class="text-gray-500 hover:text-brand-primary transition">Início</a>
+                <a href="sobre.html" class="text-gray-500 hover:text-brand-primary transition">Sobre</a>
+                <a href="servicos.html" class="text-gray-500 hover:text-brand-primary transition">Serviços</a>
+                <a href="blog.html" class="text-brand-primary font-semibold border-b-2 border-brand-primary">Blog</a>
+                <a href="contato.html" class="bg-brand-primary text-white px-6 py-2 rounded-full shadow-lg hover:shadow-brand-primary/50 hover:-translate-y-0.5 transition-all">Contato</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="pt-44 pb-20 bg-brand-dark text-white relative overflow-hidden">
+        <div class="absolute inset-0 opacity-20" style="background-image: url('https://www.transparenttextures.com/patterns/cubes.png');"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-center">
+            <span class="text-blue-400 font-bold tracking-widest uppercase text-sm" data-aos="fade-up">Hub de Conhecimento</span>
+            <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-extrabold mt-4 mb-6" data-aos="fade-up" data-aos-delay="100">
+                Blog <span class="gradient-text">Eficazz</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-gray-300 text-lg md:text-xl opacity-90" data-aos="fade-up" data-aos-delay="200">
+                Informação estratégica, atualizações fiscais e dicas de gestão para o empresário moderno.
+            </p>
+        </div>
+    </section>
+
+    <div class="max-w-7xl mx-auto px-6 -mt-8 relative z-20">
+        <div class="bg-white p-4 rounded-2xl shadow-xl flex flex-wrap gap-4 justify-center items-center border border-gray-100">
+            <button class="px-6 py-2 rounded-xl bg-brand-primary text-white font-bold text-sm transition shadow-lg">Todos</button>
+            <button class="px-6 py-2 rounded-xl bg-gray-50 text-gray-500 hover:bg-brand-light hover:text-brand-primary font-bold text-sm transition">Gestão Fiscal</button>
+            <button class="px-6 py-2 rounded-xl bg-gray-50 text-gray-500 hover:bg-brand-light hover:text-brand-primary font-bold text-sm transition">Tributário</button>
+            <button class="px-6 py-2 rounded-xl bg-gray-50 text-gray-500 hover:bg-brand-light hover:text-brand-primary font-bold text-sm transition">Empreendedorismo</button>
+        </div>
+    </div>
+
+    <section class="py-24 max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+
+            <article class="blog-card group bg-white rounded-[2rem] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-2xl transition-all duration-500" data-aos="fade-up">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop" alt="Redução de Impostos" class="blog-image w-full h-full object-cover transition duration-700">
+                    <div class="absolute top-4 left-4 bg-brand-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Estratégia</div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center gap-4 text-xs text-gray-400 mb-4">
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 10 Mar 2026</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 5 min de leitura</span>
+                    </div>
+                    <h2 class="font-heading text-2xl font-bold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors">
+                        Como reduzir impostos legalmente em 2026
+                    </h2>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                        Entenda as estratégias de planejamento tributário que podem salvar o caixa da sua empresa este ano...
+                    </p>
+                    <a href="#" class="inline-flex items-center font-bold text-brand-primary group-hover:gap-3 transition-all">
+                        Ler artigo completo <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="blog-card group bg-white rounded-[2rem] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop" alt="Mudanças Fiscais" class="blog-image w-full h-full object-cover transition duration-700">
+                    <div class="absolute top-4 left-4 bg-brand-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Legislação</div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center gap-4 text-xs text-gray-400 mb-4">
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 08 Mar 2026</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 8 min de leitura</span>
+                    </div>
+                    <h2 class="font-heading text-2xl font-bold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors">
+                        Principais mudanças fiscais para o próximo semestre
+                    </h2>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                        O cenário contábil mudou. Veja o que sua empresa precisa ajustar para evitar multas e inconsistências...
+                    </p>
+                    <a href="#" class="inline-flex items-center font-bold text-brand-primary group-hover:gap-3 transition-all">
+                        Ler artigo completo <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </article>
+
+            <article class="blog-card group bg-white rounded-[2rem] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
+                <div class="relative h-64 overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Gestão BPO" class="blog-image w-full h-full object-cover transition duration-700">
+                    <div class="absolute top-4 left-4 bg-brand-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Gestão</div>
+                </div>
+                <div class="p-8">
+                    <div class="flex items-center gap-4 text-xs text-gray-400 mb-4">
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 01 Mar 2026</span>
+                        <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 4 min de leitura</span>
+                    </div>
+                    <h2 class="font-heading text-2xl font-bold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors">
+                        BPO Financeiro: Por que terceirizar?
+                    </h2>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
+                        Focar no que você faz de melhor enquanto especialistas cuidam do seu financeiro. Saiba os benefícios reais...
+                    </p>
+                    <a href="#" class="inline-flex items-center font-bold text-brand-primary group-hover:gap-3 transition-all">
+                        Ler artigo completo <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+
+        <div class="mt-20 flex justify-center gap-2">
+            <button class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center hover:bg-brand-primary hover:text-white transition"><i class="fa-solid fa-chevron-left"></i></button>
+            <button class="w-10 h-10 rounded-lg bg-brand-primary text-white font-bold">1</button>
+            <button class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center hover:bg-brand-primary hover:text-white transition">2</button>
+            <button class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center hover:bg-brand-primary hover:text-white transition"><i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </section>
+
+    <section class="py-24 bg-gray-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-white rounded-[3rem] p-8 md:p-16 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center gap-12 border border-blue-50">
+                <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-light rounded-full opacity-50"></div>
+                
+                <div class="md:w-1/2 relative z-10">
+                    <h2 class="font-heading text-3xl font-bold text-brand-dark mb-4">Assine nossa Newsletter Estratégica</h2>
+                    <p class="text-gray-500">Receba atualizações fiscais e dicas de gestão diretamente no seu e-mail. Sem spam, apenas inteligência.</p>
+                </div>
+                
+                <div class="md:w-1/2 w-full relative z-10">
+                    <form class="flex flex-col sm:flex-row gap-3">
+                        <input type="email" placeholder="Seu melhor e-mail" class="flex-1 px-6 py-4 rounded-2xl border border-gray-200 focus:outline-none focus:ring-4 focus:ring-brand-primary/5 transition">
+                        <button class="bg-brand-primary text-white px-8 py-4 rounded-2xl font-bold hover:bg-brand-dark transition-all shadow-lg">Inscrever</button>
+                    </form>
+                    <p class="text-[10px] text-gray-400 mt-3 text-center sm:text-left">Ao se inscrever, você concorda com nossa Política de Privacidade.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-gray-400 pt-20 pb-10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center space-x-3 mb-6">
+                    <img src="../img/EFICAZ SIMBOLO BRANCO.png" class="h-8 brightness-0 invert" alt="Logo" onerror="this.src='https://via.placeholder.com/40x40/ffffff/0f2f4f?text=E'">
+                    <span class="font-heading font-bold text-white text-xl tracking-widest">EFICAZZ</span>
+                </div>
+                <p class="text-sm leading-relaxed">Referência em contabilidade consultiva e estratégica em João Pessoa e região.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Links</h4>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-white">Início</a></li>
+                    <li><a href="sobre.html" class="hover:text-white">Sobre</a></li>
+                    <li><a href="servicos.html" class="hover:text-white">Serviços</a></li>
+                    <li><a href="contato.html" class="hover:text-white">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Categorias</h4>
+                <ul class="space-y-2 text-sm text-gray-500">
+                    <li><a href="#" class="hover:text-white">Planejamento Tributário</a></li>
+                    <li><a href="#" class="hover:text-white">BPO Financeiro</a></li>
+                    <li><a href="#" class="hover:text-white">Abertura de Empresa</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Sede</h4>
+                <p class="text-sm">João Pessoa - PB</p>
+                <p class="text-xs mt-4">contato@eficazzcontabilidade.com.br</p>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 border-t border-white/5 pt-8 text-center text-xs opacity-50">
+            © 2026 EFICAZZ Soluções Contábeis. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, duration: 800 });
+    </script>
+</body>
+</html>
