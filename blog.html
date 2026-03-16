@@ -39,6 +39,7 @@
         }
         .gradient-text {
             background: linear-gradient(to right, #60a5fa, #1c4e80);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -61,14 +62,14 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3 cursor-pointer">
                 <img src="../img/EFICAZ SIMBOLO AZUL.png" alt="Eficazz Logo" class="h-10" onerror="this.src='https://via.placeholder.com/40x40/1c4e80/ffffff?text=E'">
-                <span class="font-heading font-bold text-brand-dark text-2xl tracking-tight uppercase">EFICAZZ</span>
+                <span class="font-heading font-bold text-brand-dark text-2xl tracking-tight">EFICAZZ</span>
             </div>
             <nav class="hidden md:flex space-x-8 font-medium items-center">
                 <a href="index.html" class="text-gray-500 hover:text-brand-primary transition">Início</a>
                 <a href="sobre.html" class="text-gray-500 hover:text-brand-primary transition">Sobre</a>
                 <a href="servicos.html" class="text-gray-500 hover:text-brand-primary transition">Serviços</a>
-                <a href="blog.html" class="text-brand-primary font-semibold border-b-2 border-brand-primary">Blog</a>
-                <a href="contato.html" class="bg-brand-primary text-white px-6 py-2 rounded-full shadow-lg hover:shadow-brand-primary/50 hover:-translate-y-0.5 transition-all">Contato</a>
+                <a href="blog.html" class="text-brand-primary font-semibold">Blog</a>
+                <a href="contato.html" class="bg-brand-primary text-white px-6 py-2 rounded-full shadow-lg hover:shadow-brand-primary/50 hover:-translate-y-0.5 transition-all">Contato <i class="fa-solid fa-arrow-right ml-2 text-sm"></i></a>
             </nav>
         </div>
     </header>
@@ -87,151 +88,305 @@
     </section>
 
     <div class="max-w-7xl mx-auto px-6 -mt-8 relative z-20">
-        <div class="bg-white p-4 rounded-2xl shadow-xl flex flex-wrap gap-4 justify-center items-center border border-gray-100">
-            <button class="px-6 py-2 rounded-xl bg-brand-primary text-white font-bold text-sm transition shadow-lg">Todos</button>
-            <button class="px-6 py-2 rounded-xl bg-gray-50 text-gray-500 hover:bg-brand-light hover:text-brand-primary font-bold text-sm transition">Gestão Fiscal</button>
-            <button class="px-6 py-2 rounded-xl bg-gray-50 text-gray-500 hover:bg-brand-light hover:text-brand-primary font-bold text-sm transition">Tributário</button>
-            <button class="px-6 py-2 rounded-xl bg-gray-50 text-gray-500 hover:bg-brand-light hover:text-brand-primary font-bold text-sm transition">Empreendedorismo</button>
-        </div>
+        <div id="filter-bar" class="bg-white p-4 rounded-2xl shadow-xl flex flex-wrap gap-4 justify-center items-center border border-gray-100"></div>
     </div>
 
     <section class="py-24 max-w-7xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
-
-            <article class="blog-card group bg-white rounded-[2rem] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-2xl transition-all duration-500" data-aos="fade-up">
-                <div class="relative h-64 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=800&auto=format&fit=crop" alt="Redução de Impostos" class="blog-image w-full h-full object-cover transition duration-700">
-                    <div class="absolute top-4 left-4 bg-brand-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Estratégia</div>
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-4 text-xs text-gray-400 mb-4">
-                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 10 Mar 2026</span>
-                        <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 5 min de leitura</span>
-                    </div>
-                    <h2 class="font-heading text-2xl font-bold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors">
-                        Como reduzir impostos legalmente em 2026
-                    </h2>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                        Entenda as estratégias de planejamento tributário que podem salvar o caixa da sua empresa este ano...
-                    </p>
-                    <a href="#" class="inline-flex items-center font-bold text-brand-primary group-hover:gap-3 transition-all">
-                        Ler artigo completo <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
-                    </a>
-                </div>
-            </article>
-
-            <article class="blog-card group bg-white rounded-[2rem] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
-                <div class="relative h-64 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop" alt="Mudanças Fiscais" class="blog-image w-full h-full object-cover transition duration-700">
-                    <div class="absolute top-4 left-4 bg-brand-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Legislação</div>
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-4 text-xs text-gray-400 mb-4">
-                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 08 Mar 2026</span>
-                        <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 8 min de leitura</span>
-                    </div>
-                    <h2 class="font-heading text-2xl font-bold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors">
-                        Principais mudanças fiscais para o próximo semestre
-                    </h2>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                        O cenário contábil mudou. Veja o que sua empresa precisa ajustar para evitar multas e inconsistências...
-                    </p>
-                    <a href="#" class="inline-flex items-center font-bold text-brand-primary group-hover:gap-3 transition-all">
-                        Ler artigo completo <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
-                    </a>
-                </div>
-            </article>
-
-            <article class="blog-card group bg-white rounded-[2rem] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-2xl transition-all duration-500" data-aos="fade-up" data-aos-delay="200">
-                <div class="relative h-64 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop" alt="Gestão BPO" class="blog-image w-full h-full object-cover transition duration-700">
-                    <div class="absolute top-4 left-4 bg-brand-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Gestão</div>
-                </div>
-                <div class="p-8">
-                    <div class="flex items-center gap-4 text-xs text-gray-400 mb-4">
-                        <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> 01 Mar 2026</span>
-                        <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> 4 min de leitura</span>
-                    </div>
-                    <h2 class="font-heading text-2xl font-bold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors">
-                        BPO Financeiro: Por que terceirizar?
-                    </h2>
-                    <p class="text-gray-500 text-sm leading-relaxed mb-6">
-                        Focar no que você faz de melhor enquanto especialistas cuidam do seu financeiro. Saiba os benefícios reais...
-                    </p>
-                    <a href="#" class="inline-flex items-center font-bold text-brand-primary group-hover:gap-3 transition-all">
-                        Ler artigo completo <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
-                    </a>
-                </div>
-            </article>
-
-        </div>
-
-        <div class="mt-20 flex justify-center gap-2">
-            <button class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center hover:bg-brand-primary hover:text-white transition"><i class="fa-solid fa-chevron-left"></i></button>
-            <button class="w-10 h-10 rounded-lg bg-brand-primary text-white font-bold">1</button>
-            <button class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center hover:bg-brand-primary hover:text-white transition">2</button>
-            <button class="w-10 h-10 rounded-lg bg-white border border-gray-200 flex items-center justify-center hover:bg-brand-primary hover:text-white transition"><i class="fa-solid fa-chevron-right"></i></button>
-        </div>
+        <div id="blog-posts" class="grid md:grid-cols-2 lg:grid-cols-3 gap-10"></div>
+        <div id="blog-empty" class="hidden text-center text-gray-500 mt-16">Nenhum post encontrado.</div>
     </section>
 
-    <section class="py-24 bg-gray-100">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="bg-white rounded-[3rem] p-8 md:p-16 shadow-2xl relative overflow-hidden flex flex-col md:flex-row items-center gap-12 border border-blue-50">
-                <div class="absolute -top-10 -right-10 w-40 h-40 bg-brand-light rounded-full opacity-50"></div>
-                
-                <div class="md:w-1/2 relative z-10">
-                    <h2 class="font-heading text-3xl font-bold text-brand-dark mb-4">Assine nossa Newsletter Estratégica</h2>
-                    <p class="text-gray-500">Receba atualizações fiscais e dicas de gestão diretamente no seu e-mail. Sem spam, apenas inteligência.</p>
+    <div id="post-modal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50 px-4">
+        <div class="bg-white max-w-3xl w-full rounded-[2rem] shadow-2xl overflow-hidden">
+            <div class="flex justify-between items-center p-6 border-b border-gray-100">
+                <h3 id="modal-title" class="font-heading text-2xl font-bold text-brand-dark"></h3>
+                <button id="modal-close" class="text-gray-400 hover:text-brand-primary text-xl">&times;</button>
+            </div>
+            <div id="modal-cover" class="h-64 bg-gradient-to-br from-brand-primary/20 to-brand-dark/40 flex items-center justify-center">
+                <i class="fa-solid fa-newspaper text-white/80 text-4xl"></i>
+            </div>
+            <div class="p-8">
+                <div class="flex items-center gap-4 text-xs text-gray-400 mb-6">
+                    <span id="modal-category" class="font-bold text-brand-primary uppercase tracking-widest"></span>
+                    <span id="modal-date" class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i></span>
+                    <span id="modal-read" class="flex items-center gap-1"><i class="fa-regular fa-clock"></i></span>
                 </div>
-                
-                <div class="md:w-1/2 w-full relative z-10">
-                    <form class="flex flex-col sm:flex-row gap-3">
-                        <input type="email" placeholder="Seu melhor e-mail" class="flex-1 px-6 py-4 rounded-2xl border border-gray-200 focus:outline-none focus:ring-4 focus:ring-brand-primary/5 transition">
-                        <button class="bg-brand-primary text-white px-8 py-4 rounded-2xl font-bold hover:bg-brand-dark transition-all shadow-lg">Inscrever</button>
-                    </form>
-                    <p class="text-[10px] text-gray-400 mt-3 text-center sm:text-left">Ao se inscrever, você concorda com nossa Política de Privacidade.</p>
-                </div>
+                <div id="modal-content" class="text-gray-600 leading-relaxed space-y-4"></div>
             </div>
         </div>
-    </section>
+    </div>
 
-    <footer class="bg-brand-dark text-gray-400 pt-20 pb-10">
-        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-            <div class="col-span-1 md:col-span-1">
+    <footer class="bg-brand-dark text-gray-300 pt-20 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
+            <div>
                 <div class="flex items-center space-x-3 mb-6">
                     <img src="../img/EFICAZ SIMBOLO BRANCO.png" class="h-8 brightness-0 invert" alt="Logo" onerror="this.src='https://via.placeholder.com/40x40/ffffff/0f2f4f?text=E'">
-                    <span class="font-heading font-bold text-white text-xl tracking-widest">EFICAZZ</span>
+                    <span class="font-heading font-bold text-white text-xl">EFICAZZ</span>
                 </div>
-                <p class="text-sm leading-relaxed">Referência em contabilidade consultiva e estratégica em João Pessoa e região.</p>
+                <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+                    Contabilidade consultiva e estratégica focada no crescimento e na segurança jurídica da sua empresa.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/eficazzcontabilidade/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
             </div>
+
             <div>
-                <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Links</h4>
-                <ul class="space-y-2 text-sm">
-                    <li><a href="index.html" class="hover:text-white">Início</a></li>
-                    <li><a href="sobre.html" class="hover:text-white">Sobre</a></li>
-                    <li><a href="servicos.html" class="hover:text-white">Serviços</a></li>
-                    <li><a href="contato.html" class="hover:text-white">Contato</a></li>
+                <h4 class="font-heading font-bold text-white mb-6 uppercase tracking-wider text-sm">Institucional</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="index.html" class="hover:text-brand-light transition-colors">Início</a></li>
+                    <li><a href="sobre.html" class="hover:text-brand-light transition-colors">Quem Somos</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Soluções</a></li>
+                    <li><a href="blog.html" class="hover:text-brand-light transition-colors">Blog & Artigos</a></li>
                 </ul>
             </div>
+
             <div>
-                <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Categorias</h4>
-                <ul class="space-y-2 text-sm text-gray-500">
-                    <li><a href="#" class="hover:text-white">Planejamento Tributário</a></li>
-                    <li><a href="#" class="hover:text-white">BPO Financeiro</a></li>
-                    <li><a href="#" class="hover:text-white">Abertura de Empresa</a></li>
+                <h4 class="font-heading font-bold text-white mb-6 uppercase tracking-wider text-sm">Principais Serviços</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Abertura de Empresa</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Troca de Contador</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Regularização de CNPJ</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Consultoria Tributária</a></li>
                 </ul>
             </div>
+
             <div>
-                <h4 class="text-white font-bold mb-6 text-sm uppercase tracking-widest">Sede</h4>
-                <p class="text-sm">João Pessoa - PB</p>
-                <p class="text-xs mt-4">contato@eficazzcontabilidade.com.br</p>
+                <h4 class="font-heading font-bold text-white mb-6 uppercase tracking-wider text-sm">Fale Conosco</h4>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot mt-1 text-brand-primary"></i>
+                        <span>Av. Epitacio Pessoa, 753, Edf. Central Park, Sala 1210<br>João Pessoa - PB, 58030-000</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-brand-primary"></i>
+                        <span>(83) 99962-2071</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-brand-primary"></i>
+                        <span>contato@eficazzcontabilidade.com.br</span>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div class="max-w-7xl mx-auto px-6 border-t border-white/5 pt-8 text-center text-xs opacity-50">
-            © 2026 EFICAZZ Soluções Contábeis. Todos os direitos reservados.
+
+        <div class="max-w-7xl mx-auto px-6 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+            <p>&copy; 2026 EFICAZZ Soluções Contábeis. Todos os direitos reservados.</p>
+            <div class="mt-4 md:mt-0 space-x-4">
+                <a href="admin.html" class="hover:text-white">Admin</a>
+            </div>
         </div>
     </footer>
 
+    <script>
+        const apiKey = "eficazz_api_base";
+        const defaultApi = "http://localhost:3000";
+        const API_BASE = (() => {
+            const saved = localStorage.getItem(apiKey);
+            if (saved) return saved;
+            return window.location.origin === "null" ? defaultApi : "";
+        })();
+        const postsContainer = document.getElementById("blog-posts");
+        const emptyState = document.getElementById("blog-empty");
+        const filterBar = document.getElementById("filter-bar");
+        const modal = document.getElementById("post-modal");
+        const modalTitle = document.getElementById("modal-title");
+        const modalCover = document.getElementById("modal-cover");
+        const modalCategory = document.getElementById("modal-category");
+        const modalDate = document.getElementById("modal-date");
+        const modalRead = document.getElementById("modal-read");
+        const modalContent = document.getElementById("modal-content");
+        const modalClose = document.getElementById("modal-close");
+        let filterButtons = [];
+        let allPosts = [];
+        let activeCategory = "all";
+
+        function formatDate(isoDate) {
+            if (!isoDate) return "";
+            return new Date(isoDate).toLocaleDateString("pt-BR", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric"
+            });
+        }
+
+        function readingTime(text) {
+            const words = (text || "").trim().split(/\s+/).filter(Boolean).length;
+            const minutes = Math.max(1, Math.round(words / 200));
+            return `${minutes} min de leitura`;
+        }
+
+        function normalizeCategory(category) {
+            return (category || "").toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
+        }
+
+        function renderPosts(posts) {
+            postsContainer.innerHTML = "";
+            if (!posts.length) {
+                emptyState.classList.remove("hidden");
+                return;
+            }
+            emptyState.classList.add("hidden");
+
+            posts.forEach((post) => {
+                const card = document.createElement("article");
+                card.className = "blog-card group bg-white rounded-[2rem] overflow-hidden shadow-[0_10px_40px_rgba(0,0,0,0.03)] border border-gray-100 hover:shadow-2xl transition-all duration-500";
+
+                const imageUrl = post.image_url;
+                const excerpt = post.excerpt || (post.content || "").slice(0, 160) + "...";
+                const category = post.category || "Geral";
+                const cover = imageUrl
+                    ? `<img src="${imageUrl}" alt="${post.title}" class="blog-image w-full h-full object-cover transition duration-700">`
+                    : `<div class="w-full h-full bg-gradient-to-br from-brand-primary/20 to-brand-dark/40 flex items-center justify-center">
+                        <i class="fa-solid fa-newspaper text-white/80 text-4xl"></i>
+                    </div>`;
+
+                card.innerHTML = `
+                    <div class="relative h-64 overflow-hidden">
+                        ${cover}
+                        <div class="absolute top-4 left-4 bg-brand-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">${category}</div>
+                    </div>
+                    <div class="p-8">
+                        <div class="flex items-center gap-4 text-xs text-gray-400 mb-4">
+                            <span class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i> ${formatDate(post.published_at)}</span>
+                            <span class="flex items-center gap-1"><i class="fa-regular fa-clock"></i> ${readingTime(post.content)}</span>
+                        </div>
+                        <h2 class="font-heading text-2xl font-bold text-brand-dark mb-4 group-hover:text-brand-primary transition-colors">
+                            ${post.title}
+                        </h2>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-6">${excerpt}</p>
+                        <button data-id="${post.id}" class="open-post inline-flex items-center font-bold text-brand-primary group-hover:gap-3 transition-all">
+                            Ler artigo completo <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                        </button>
+                    </div>
+                `;
+
+                postsContainer.appendChild(card);
+            });
+        }
+
+        function renderModal(post) {
+            modalTitle.textContent = post.title || "";
+            modalCategory.textContent = post.category || "Geral";
+            modalDate.innerHTML = `<i class="fa-regular fa-calendar"></i> ${formatDate(post.published_at)}`;
+            modalRead.innerHTML = `<i class="fa-regular fa-clock"></i> ${readingTime(post.content)}`;
+            if (post.image_url) {
+                modalCover.innerHTML = `<img src="${post.image_url}" alt="${post.title}" class="w-full h-full object-cover">`;
+            } else {
+                modalCover.innerHTML = `<div class="w-full h-full bg-gradient-to-br from-brand-primary/20 to-brand-dark/40 flex items-center justify-center">
+                    <i class="fa-solid fa-newspaper text-white/80 text-4xl"></i>
+                </div>`;
+            }
+
+            modalContent.innerHTML = "";
+            const paragraphs = (post.content || "").split(/\n+/).filter(Boolean);
+            paragraphs.forEach((paragraph) => {
+                const p = document.createElement("p");
+                p.textContent = paragraph;
+                modalContent.appendChild(p);
+            });
+
+            modal.classList.remove("hidden");
+            modal.classList.add("flex");
+        }
+
+        function closeModal() {
+            modal.classList.add("hidden");
+            modal.classList.remove("flex");
+        }
+
+        function setActiveFilter(button) {
+            filterButtons.forEach((btn) => {
+                btn.classList.remove("bg-brand-primary", "text-white", "shadow-lg");
+                btn.classList.add("bg-gray-50", "text-gray-500");
+            });
+            button.classList.remove("bg-gray-50", "text-gray-500");
+            button.classList.add("bg-brand-primary", "text-white", "shadow-lg");
+        }
+
+        function buildFilters(posts) {
+            const categories = Array.from(
+                new Set(
+                    posts
+                        .map((post) => post.category)
+                        .filter((category) => Boolean(category))
+                        .map((category) => category.trim())
+                )
+            );
+
+            filterBar.innerHTML = "";
+            const allButton = document.createElement("button");
+            allButton.dataset.category = "all";
+            allButton.className = "filter-btn px-6 py-2 rounded-xl bg-brand-primary text-white font-bold text-sm transition shadow-lg";
+            allButton.textContent = "Todos";
+            filterBar.appendChild(allButton);
+
+            categories.forEach((category) => {
+                const button = document.createElement("button");
+                button.dataset.category = category;
+                button.className = "filter-btn px-6 py-2 rounded-xl bg-gray-50 text-gray-500 hover:bg-brand-light hover:text-brand-primary font-bold text-sm transition";
+                button.textContent = category;
+                filterBar.appendChild(button);
+            });
+
+            filterButtons = Array.from(document.querySelectorAll(".filter-btn"));
+            filterButtons.forEach((button) => {
+                button.addEventListener("click", () => {
+                    const category = button.getAttribute("data-category");
+                    activeCategory = category || "all";
+                    setActiveFilter(button);
+                    applyFilter(activeCategory);
+                });
+            });
+        }
+
+        function applyFilter(category) {
+            if (category === "all") {
+                renderPosts(allPosts);
+                return;
+            }
+            const normalized = normalizeCategory(category);
+            const filtered = allPosts.filter((post) => normalizeCategory(post.category) === normalized);
+            renderPosts(filtered);
+        }
+
+        fetch(`${API_BASE}/api/posts`)
+            .then((response) => response.json())
+            .then((data) => {
+                allPosts = Array.isArray(data) ? data : [];
+                buildFilters(allPosts);
+                applyFilter(activeCategory);
+            })
+            .catch(() => {
+                postsContainer.innerHTML = "";
+                emptyState.textContent = "Nao foi possivel carregar os posts.";
+                emptyState.classList.remove("hidden");
+            });
+
+        postsContainer.addEventListener("click", (event) => {
+            const button = event.target.closest(".open-post");
+            if (!button) return;
+            const postId = button.getAttribute("data-id");
+            const post = allPosts.find((item) => String(item.id) === String(postId));
+            if (post) {
+                renderModal(post);
+            }
+        });
+
+        modalClose.addEventListener("click", closeModal);
+        modal.addEventListener("click", (event) => {
+            if (event.target === modal) {
+                closeModal();
+            }
+        });
+        window.addEventListener("keydown", (event) => {
+            if (event.key === "Escape") {
+                closeModal();
+            }
+        });
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ once: true, duration: 800 });

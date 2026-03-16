@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>EFICAZZ Soluções Contábeis | Contabilidade Premium</title>
+    <title>EFICAZZ Soluções Contábeis | Contabilidade Estratégica</title>
     <meta name="description" content="Contabilidade estratégica, planejamento tributário e gestão financeira para empresas crescerem com segurança.">
     <meta name="keywords" content="contabilidade, contabilidade digital, abrir empresa, planejamento tributário, contador para empresas">
     <meta name="author" content="EFICAZZ Soluções Contábeis">
@@ -39,11 +39,13 @@
     <style>
         .gradient-text {
             background: linear-gradient(to right, #60a5fa, #ffffff);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
         .gradient-text-blue {
             background: linear-gradient(to right, #1c4e80, #3b82f6);
+            background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -54,12 +56,29 @@
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
         .wpp-btn { animation: pulse-wpp 2s infinite; }
+        .review-track {
+            display: flex;
+            gap: 1.5rem;
+            width: max-content;
+            animation: marquee 90s linear infinite;
+        }
+        .review-track:hover {
+            animation-play-state: paused;
+        }
+        .review-card {
+            min-width: 320px;
+            max-width: 320px;
+        }
+        @keyframes marquee {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
     </style>
 </head>
 
 <body class="bg-gray-50 text-gray-700 antialiased overflow-x-hidden">
 
-    <a href="https://wa.me/5511999999999" target="_blank" class="wpp-btn fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-[#20ba59] transition duration-300">
+    <a href="https://wa.me/5583999622071" target="_blank" class="wpp-btn fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl hover:bg-[#20ba59] transition duration-300">
         <i class="fa-brands fa-whatsapp"></i>
     </a>
 
@@ -73,7 +92,7 @@
                 <a href="#inicio" class="text-brand-primary font-semibold">Início</a>
                 <a href="sobre.html" class="text-gray-500 hover:text-brand-primary transition">Sobre</a>
                 <a href="servicos.html" class="text-gray-500 hover:text-brand-primary transition">Serviços</a>
-                <a href="blog.html" class="text-gray-500 hover:text-brand-primary transition">blog.html</a>
+                <a href="blog.html" class="text-gray-500 hover:text-brand-primary transition">Blog</a>
                 <a href="contato.html" class="bg-brand-primary text-white px-6 py-2 rounded-full shadow-lg hover:shadow-brand-primary/50 hover:-translate-y-0.5 transition-all">Contato <i class="fa-solid fa-arrow-right ml-2 text-sm"></i></a>
             </nav>
         </div>
@@ -88,7 +107,7 @@
         <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
             <div data-aos="fade-right" data-aos-duration="1000">
                 <div class="inline-block bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                    <i class="fa-solid fa-star text-yellow-400 mr-2"></i> Contabilidade Premium para PMEs
+                    <i class="fa-solid fa-star text-yellow-400 mr-2"></i> Contabilidade em João Pessoa - PB
                 </div>
                 <h1 class="font-heading text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                     Inteligência Fiscal para sua Empresa <span class="gradient-text">Crescer Segura.</span>
@@ -116,7 +135,7 @@
                                 <i class="fa-solid fa-arrow-trend-up"></i>
                             </div>
                             <div>
-                                <p class="text-xs text-gray-500 font-bold uppercase">Impostos Reduzidos</p>
+                                <p class="text-xs text-gray-500 font-bold uppercase">Redução Tributária</p>
                                 <span class="text-xl font-heading font-bold text-brand-dark">Até 30%</span>
                             </div>
                         </div>
@@ -168,11 +187,10 @@
 
                 <div class="group bg-brand-light/30 p-8 rounded-2xl hover:bg-white hover:shadow-2xl transition-all duration-300 border border-transparent hover:border-blue-100" data-aos="fade-up" data-aos-delay="400">
                     <div class="w-14 h-14 bg-brand-primary text-white rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 group-hover:bg-blue-600 transition-all">
-                        <i class="fa-solid fa-cloud"></i>
+                        <i class="fa-solid fa-chart-line"></i>
                     </div>
-                    <h3 class="font-heading font-bold text-xl mb-3 text-brand-dark">100% em Nuvem</h3>
-                    <p class="text-gray-600 text-sm leading-relaxed">Acesse seus documentos e relatórios 24/7 de qualquer lugar através do nosso portal.</p>
-                </div>
+                    <h3 class="font-heading font-bold text-xl mb-3 text-brand-dark">Foco no Crescimento</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Relatórios gerenciais para você tomar decisões estratégicas e escalar seu negócio.</p>
             </div>
         </div>
     </section>
@@ -184,16 +202,16 @@
                 <p class="text-blue-200 text-sm md:text-base font-medium">Empresas Atendidas</p>
             </div>
             <div class="px-4">
-                <h3 class="font-heading text-4xl md:text-5xl font-bold mb-2"><span class="counter" data-target="10">0</span></h3>
+                <h3 class="font-heading text-4xl md:text-5xl font-bold mb-2"><span class="counter" data-target="10">0</span>+</h3>
                 <p class="text-blue-200 text-sm md:text-base font-medium">Anos de Mercado</p>
             </div>
             <div class="px-4">
-                <h3 class="font-heading text-4xl md:text-5xl font-bold mb-2"><span class="counter" data-target="50">0</span>M+</h3>
-                <p class="text-blue-200 text-sm md:text-base font-medium">Patrimônio Gerido</p>
+                <h3 class="font-heading text-4xl md:text-5xl font-bold mb-2"><span class="counter" data-target="10">0</span>M+</h3>
+                <p class="text-blue-200 text-sm md:text-base font-medium">Em Faturamento Acompanhado</p>
             </div>
             <div class="px-4">
-                <h3 class="font-heading text-4xl md:text-5xl font-bold mb-2"><span class="counter" data-target="99">0</span>%</h3>
-                <p class="text-blue-200 text-sm md:text-base font-medium">Índice de Retenção</p>
+                <h3 class="font-heading text-4xl md:text-5xl font-bold mb-2"><span class="counter" data-target="100">0</span>%</h3>
+                <p class="text-blue-200 text-sm md:text-base font-medium">Atendimento Humanizado</p>
             </div>
         </div>
     </section>
@@ -220,7 +238,7 @@
                     <div>
                         <h3 class="font-heading text-2xl font-bold text-brand-dark mb-3">Gestão Contábil Digital</h3>
                         <p class="text-gray-600 mb-4 leading-relaxed">Rotinas contábeis, emissão de guias, folha de pagamento e balancetes integrados em plataforma digital de fácil acesso.</p>
-                        <a href="#" class="text-brand-primary font-semibold text-sm hover:underline">Saber mais <i class="fa-solid fa-chevron-right text-xs ml-1"></i></a>
+                        <a href="servicos.html" class="text-brand-primary font-semibold text-sm hover:underline">Saber mais <i class="fa-solid fa-chevron-right text-xs ml-1"></i></a>
                     </div>
                 </div>
 
@@ -231,7 +249,7 @@
                     <div>
                         <h3 class="font-heading text-2xl font-bold text-brand-dark mb-3">Abertura de Empresa</h3>
                         <p class="text-gray-600 mb-4 leading-relaxed">Processo rápido, sem burocracia. Orientamos sobre a melhor natureza jurídica para você pagar o mínimo de imposto permitido por lei.</p>
-                        <a href="#" class="text-brand-primary font-semibold text-sm hover:underline">Saber mais <i class="fa-solid fa-chevron-right text-xs ml-1"></i></a>
+                        <a href="servicos.html" class="text-brand-primary font-semibold text-sm hover:underline">Saber mais <i class="fa-solid fa-chevron-right text-xs ml-1"></i></a>
                     </div>
                 </div>
 
@@ -242,7 +260,7 @@
                     <div>
                         <h3 class="font-heading text-2xl font-bold text-brand-dark mb-3">Planejamento Tributário</h3>
                         <p class="text-gray-600 mb-4 leading-relaxed">Revisão fiscal completa. Analisamos sua tributação atual e criamos estratégias lícitas para maximizar sua margem de lucro.</p>
-                        <a href="#" class="text-brand-primary font-semibold text-sm hover:underline">Saber mais <i class="fa-solid fa-chevron-right text-xs ml-1"></i></a>
+                        <a href="servicos.html" class="text-brand-primary font-semibold text-sm hover:underline">Saber mais <i class="fa-solid fa-chevron-right text-xs ml-1"></i></a>
                     </div>
                 </div>
 
@@ -253,7 +271,7 @@
                     <div>
                         <h3 class="font-heading text-2xl font-bold text-brand-dark mb-3">Regularização de CNPJ</h3>
                         <p class="text-gray-600 mb-4 leading-relaxed">Empresa inativa ou com dívidas? Fazemos o levantamento completo, parcelamentos e devolvemos a saúde fiscal do seu negócio.</p>
-                        <a href="#" class="text-brand-primary font-semibold text-sm hover:underline">Saber mais <i class="fa-solid fa-chevron-right text-xs ml-1"></i></a>
+                        <a href="servicos.html" class="text-brand-primary font-semibold text-sm hover:underline">Saber mais <i class="fa-solid fa-chevron-right text-xs ml-1"></i></a>
                     </div>
                 </div>
             </div>
@@ -296,45 +314,260 @@
         </div>
     </section>
 
-    <section id="depoimentos" class="py-24 bg-brand-light/30">
+    <section id="depoimentos" class="py-24 bg-brand-light/30 overflow-hidden">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="font-heading text-3xl font-bold text-brand-dark text-center mb-16" data-aos="fade-up">O que dizem os empresários de sucesso</h2>
+            <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+                <div>
+                    <span class="text-brand-primary font-bold tracking-wider uppercase text-sm">Avaliacoes do Google</span>
+                    <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-dark mt-2">O que dizem nossos clientes</h2>
+                </div>
+           
+            </div>
+        </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="100">
-                    <div class="flex items-center gap-4 mb-6">
-                        <img src="https://i.pravatar.cc/100?img=11" alt="Carlos" class="w-14 h-14 rounded-full object-cover">
+        <div class="relative">
+            <div class="absolute left-0 top-0 h-full w-16 bg-gradient-to-r from-brand-light/30 to-transparent pointer-events-none"></div>
+            <div class="absolute right-0 top-0 h-full w-16 bg-gradient-to-l from-brand-light/30 to-transparent pointer-events-none"></div>
+
+            <div class="review-track px-6" aria-hidden="true">
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
                         <div>
-                            <h4 class="font-bold text-brand-dark">Carlos Mendes</h4>
-                            <p class="text-xs text-gray-500">CEO, TechStore</p>
+                            <h4 class="font-bold text-brand-dark">Eduardo Bruno Correia Lima</h4>
+                            <p class="text-xs text-gray-500">4 avaliacoes · 8 fotos</p>
+                            <p class="text-xs text-gray-400">2 semanas atras · Nova</p>
                         </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     </div>
-                    <div class="text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="italic text-gray-600 text-sm">"Migrar para a EFICAZZ foi a melhor decisão financeira do ano. O planejamento tributário deles reduziu nossa carga de impostos em 15% logo no primeiro trimestre."</p>
+                    <p class="text-sm text-gray-600 mt-4">Excelente profissional! Muito satisfeito com o servico de contabilidade e toda a assessoria deles. Competentes, organizados e sempre prontos para ajudar com clareza. Nossa empresa com confianca nas maos do Aprigio!</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="200">
-                    <div class="flex items-center gap-4 mb-6">
-                        <img src="https://i.pravatar.cc/100?img=5" alt="Fernanda" class="w-14 h-14 rounded-full object-cover">
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
                         <div>
-                            <h4 class="font-bold text-brand-dark">Fernanda Lima</h4>
-                            <p class="text-xs text-gray-500">Diretora, Clínica Vitae</p>
+                            <h4 class="font-bold text-brand-dark">Kizzy Snitram</h4>
+                            <p class="text-xs text-gray-500">4 avaliacoes</p>
+                            <p class="text-xs text-gray-400">um mes atras</p>
                         </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     </div>
-                    <div class="text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="italic text-gray-600 text-sm">"Atendimento impecável. Os contadores são super acessíveis e me explicam tudo de forma clara, sem aquele 'contabilês' complicado. Recomendo de olhos fechados."</p>
+                    <p class="text-sm text-gray-600 mt-4">Trabalhando com dedicacao e otima prestacao de servicos com muita eficiencia e atencao ao cliente. Super indico.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-3xl shadow-sm hover:shadow-xl transition-all" data-aos="fade-up" data-aos-delay="300">
-                    <div class="flex items-center gap-4 mb-6">
-                        <img src="https://i.pravatar.cc/100?img=12" alt="Ricardo" class="w-14 h-14 rounded-full object-cover">
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
                         <div>
-                            <h4 class="font-bold text-brand-dark">Ricardo Alves</h4>
-                            <p class="text-xs text-gray-500">Sócio, Construtora RA</p>
+                            <h4 class="font-bold text-brand-dark">Midian Magalhaes</h4>
+                            <p class="text-xs text-gray-500">6 avaliacoes · 1 foto</p>
+                            <p class="text-xs text-gray-400">uma semana atras · Nova</p>
                         </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                     </div>
-                    <div class="text-yellow-400 mb-4 text-sm"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-                    <p class="italic text-gray-600 text-sm">"Nós tínhamos vários problemas de regularização. A equipe da EFICAZZ assumiu, auditou tudo e limpou o nome da empresa em tempo recorde."</p>
+                    <p class="text-sm text-gray-600 mt-4">Escritorio de confianca, sao super prestativos que passam em detalhes o que realmente tem que ser feito, recomendo muito Aprigio muito atencioso.</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">Vanessa Morgana</h4>
+                            <p class="text-xs text-gray-500">6 avaliacoes · 10 fotos</p>
+                            <p class="text-xs text-gray-400">uma semana atras · Nova</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Sou cliente do Aprigio ha muitos anos e posso afirmar com total seguranca que confio plenamente no seu trabalho. Profissional eficiente, honesto e comprometido.</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">Micheline Bezerra da Rocha</h4>
+                            <p class="text-xs text-gray-500">1 avaliacao</p>
+                            <p class="text-xs text-gray-400">2 semanas atras · Nova</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Um otimo profissional, muito competente e admiravel. Estamos altamente satisfeitos com seu trabalho para conosco.</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">thayna christer</h4>
+                            <p class="text-xs text-gray-500">2 avaliacoes</p>
+                            <p class="text-xs text-gray-400">um mes atras</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Profissional maravilhoso, comprometido e muito atencioso. Sempre pronto para ajudar e resolver tudo com agilidade.</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">manuela Batista carvalho</h4>
+                            <p class="text-xs text-gray-500">2 avaliacoes · 19 fotos</p>
+                            <p class="text-xs text-gray-400">um mes atras</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Empresa muito responsavel e eficiente. Sou muito grata por toda competencia. Muito obrigada por toda atencao e dedicacao. Trabalho perfeito!</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">Armazem 2m</h4>
+                            <p class="text-xs text-gray-500">1 avaliacao</p>
+                            <p class="text-xs text-gray-400">2 semanas atras · Nova</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Excelente profissional. Se voce precisa de um contador de confianca, eles sao a escolha certa!</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">Elaine Cristina</h4>
+                            <p class="text-xs text-gray-500">9 avaliacoes</p>
+                            <p class="text-xs text-gray-400">2 semanas atras · Nova</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Posso garantir que e uma empresa que presta um servico com excelencia. Profissionalismo e tempestividade sem preocupacoes.</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">Vanderson Lima</h4>
+                            <p class="text-xs text-gray-500">2 avaliacoes · 1 foto</p>
+                            <p class="text-xs text-gray-400">um mes atras</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Trabalho excelente! Aprigio um excelente profissional. Recomendo!</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">Roselaine Lopes</h4>
+                            <p class="text-xs text-gray-500">7 avaliacoes</p>
+                            <p class="text-xs text-gray-400">um mes atras</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Excelente atendimento!! Equipe competente... Recomendo com certeza...</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">Valdenicy Costa</h4>
+                            <p class="text-xs text-gray-500">1 avaliacao</p>
+                            <p class="text-xs text-gray-400">um mes atras</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Gosto demais dos servicos de Aprigio, excelente profissional.</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">Valdirene Dantas</h4>
+                            <p class="text-xs text-gray-500">1 avaliacao</p>
+                            <p class="text-xs text-gray-400">um mes atras</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Fui bem atendida, otima experiencia, recomendo.</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">kaio lucas</h4>
+                            <p class="text-xs text-gray-500">1 avaliacao</p>
+                            <p class="text-xs text-gray-400">um mes atras</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Escritorio de extrema confianca e de grande entrega nos resultados e solucoes.</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">elizangela oliveira da silva</h4>
+                            <p class="text-xs text-gray-500">2 avaliacoes</p>
+                            <p class="text-xs text-gray-400">um mes atras</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Atendimento de excelencia! Recomendo demais.</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">Genilson Marculino</h4>
+                            <p class="text-xs text-gray-500">3 avaliacoes</p>
+                            <p class="text-xs text-gray-400">um mes atras</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Empresa nota dez, assessoria contabil de primeira.</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">Colosso Eng.</h4>
+                            <p class="text-xs text-gray-500">1 avaliacao</p>
+                            <p class="text-xs text-gray-400">um mes atras</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Top! Responsavel, atencioso e competente.</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">Suzana Dias</h4>
+                            <p class="text-xs text-gray-500">2 avaliacoes</p>
+                            <p class="text-xs text-gray-400">um mes atras</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Profissional atualizado sobre as leis tributarias e trabalhistas, transparente, competente e comprometido.</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">assis anjos</h4>
+                            <p class="text-xs text-gray-500">1 avaliacao</p>
+                            <p class="text-xs text-gray-400">um mes atras</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Servico agil, muito zelo com as empresas.</p>
+                </div>
+
+                <div class="review-card bg-white p-6 rounded-3xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h4 class="font-bold text-brand-dark">Juliana Kevilen</h4>
+                            <p class="text-xs text-gray-500">3 avaliacoes</p>
+                            <p class="text-xs text-gray-400">um mes atras</p>
+                        </div>
+                        <div class="text-yellow-400 text-xs"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                    </div>
+                    <p class="text-sm text-gray-600 mt-4">Um otimo profissional!!</p>
                 </div>
             </div>
         </div>
@@ -368,9 +601,8 @@
                     Contabilidade consultiva e estratégica focada no crescimento e na segurança jurídica da sua empresa.
                 </p>
                 <div class="flex space-x-4">
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/eficazzcontabilidade/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
                 </div>
             </div>
 
@@ -387,10 +619,10 @@
             <div>
                 <h4 class="font-heading font-bold text-white mb-6 uppercase tracking-wider text-sm">Principais Serviços</h4>
                 <ul class="space-y-3 text-sm">
-                    <li><a href="#" class="hover:text-brand-light transition-colors">Abertura de Empresa</a></li>
-                    <li><a href="#" class="hover:text-brand-light transition-colors">Troca de Contador</a></li>
-                    <li><a href="#" class="hover:text-brand-light transition-colors">BPO Financeiro</a></li>
-                    <li><a href="#" class="hover:text-brand-light transition-colors">Consultoria Tributária</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Abertura de Empresa</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Troca de Contador</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Regularização de CNPJ</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Consultoria Tributária</a></li>
                 </ul>
             </div>
 
@@ -399,15 +631,15 @@
                 <ul class="space-y-4 text-sm">
                     <li class="flex items-start gap-3">
                         <i class="fa-solid fa-location-dot mt-1 text-brand-primary"></i>
-                        <span>Av. Paulista, 1000 - Bela Vista<br>São Paulo - SP, 01310-100</span>
+                        <span>Av. Epitacio Pessoa, 753, Edf. Central Park, Sala 1210<br>João Pessoa - PB, 58030-000</span>
                     </li>
                     <li class="flex items-center gap-3">
                         <i class="fa-solid fa-phone text-brand-primary"></i>
-                        <span>(11) 3000-0000</span>
+                        <span>(83) 99962-2071</span>
                     </li>
                     <li class="flex items-center gap-3">
                         <i class="fa-solid fa-envelope text-brand-primary"></i>
-                        <span>contato@eficazz.com.br</span>
+                        <span>contato@eficazzcontabilidade.com.br</span>
                     </li>
                 </ul>
             </div>
@@ -416,8 +648,7 @@
         <div class="max-w-7xl mx-auto px-6 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
             <p>&copy; 2026 EFICAZZ Soluções Contábeis. Todos os direitos reservados.</p>
             <div class="mt-4 md:mt-0 space-x-4">
-                <a href="#" class="hover:text-white">Política de Privacidade</a>
-                <a href="#" class="hover:text-white">Termos de Uso</a>
+                <a href="admin.html" class="hover:text-white">Admin</a>
             </div>
         </div>
     </footer>

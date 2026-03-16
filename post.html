@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Post | EFICAZZ</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f2f4f',
+                            primary: '#1c4e80',
+                            light: '#f0f9ff'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body class="bg-gray-50 text-gray-700 antialiased">
+    <header class="fixed w-full top-0 z-40 bg-white/80 backdrop-blur-md border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-3 cursor-pointer">
+                <img src="../img/EFICAZ SIMBOLO AZUL.png" alt="Eficazz Logo" class="h-10" onerror="this.src='https://via.placeholder.com/40x40/1c4e80/ffffff?text=E'">
+                <span class="font-heading font-bold text-brand-dark text-2xl tracking-tight">EFICAZZ</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 font-medium items-center">
+                <a href="index.html" class="text-gray-500 hover:text-brand-primary transition">Início</a>
+                <a href="sobre.html" class="text-gray-500 hover:text-brand-primary transition">Sobre</a>
+                <a href="servicos.html" class="text-gray-500 hover:text-brand-primary transition">Serviços</a>
+                <a href="blog.html" class="text-brand-primary font-semibold">Blog</a>
+                <a href="contato.html" class="bg-brand-primary text-white px-6 py-2 rounded-full shadow-lg hover:shadow-brand-primary/50 hover:-translate-y-0.5 transition-all">Contato <i class="fa-solid fa-arrow-right ml-2 text-sm"></i></a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="pt-36 pb-24">
+        <div class="max-w-4xl mx-auto px-6">
+            <a href="blog.html" class="inline-flex items-center text-brand-primary font-bold mb-6">
+                <i class="fa-solid fa-arrow-left mr-2"></i> Voltar para o blog
+            </a>
+
+            <div id="post-cover" class="h-72 md:h-96 rounded-[2rem] overflow-hidden shadow-2xl bg-gradient-to-br from-brand-primary/20 to-brand-dark/40 flex items-center justify-center">
+                <i class="fa-solid fa-newspaper text-white/80 text-5xl"></i>
+            </div>
+
+            <div class="mt-10">
+                <p id="post-category" class="text-xs uppercase tracking-widest font-bold text-brand-primary"></p>
+                <h1 id="post-title" class="font-heading text-3xl md:text-4xl font-bold text-brand-dark mt-3"></h1>
+                <div class="flex items-center gap-4 text-xs text-gray-400 mt-4">
+                    <span id="post-date" class="flex items-center gap-1"><i class="fa-regular fa-calendar"></i></span>
+                    <span id="post-read" class="flex items-center gap-1"><i class="fa-regular fa-clock"></i></span>
+                </div>
+            </div>
+
+            <article id="post-content" class="mt-10 space-y-6 text-gray-600 leading-relaxed"></article>
+            <p id="post-error" class="mt-10 text-red-600 hidden">Nao foi possivel carregar o post.</p>
+        </div>
+    </main>
+
+    <footer class="bg-brand-dark text-gray-300 pt-20 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
+            <div>
+                <div class="flex items-center space-x-3 mb-6">
+                    <img src="../img/EFICAZ SIMBOLO BRANCO.png" class="h-8 brightness-0 invert" alt="Logo" onerror="this.src='https://via.placeholder.com/40x40/ffffff/0f2f4f?text=E'">
+                    <span class="font-heading font-bold text-white text-xl">EFICAZZ</span>
+                </div>
+                <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+                    Contabilidade consultiva e estratégica focada no crescimento e na segurança jurídica da sua empresa.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/eficazzcontabilidade/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold text-white mb-6 uppercase tracking-wider text-sm">Institucional</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="index.html" class="hover:text-brand-light transition-colors">Início</a></li>
+                    <li><a href="sobre.html" class="hover:text-brand-light transition-colors">Quem Somos</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Soluções</a></li>
+                    <li><a href="blog.html" class="hover:text-brand-light transition-colors">Blog & Artigos</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold text-white mb-6 uppercase tracking-wider text-sm">Principais Serviços</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Abertura de Empresa</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Troca de Contador</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Regularização de CNPJ</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Consultoria Tributária</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold text-white mb-6 uppercase tracking-wider text-sm">Fale Conosco</h4>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot mt-1 text-brand-primary"></i>
+                        <span>Av. Epitacio Pessoa, 753, Edf. Central Park, Sala 1210<br>João Pessoa - PB, 58030-000</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-brand-primary"></i>
+                        <span>(83) 99962-2071</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-brand-primary"></i>
+                        <span>contato@eficazzcontabilidade.com.br</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+            <p>&copy; 2026 EFICAZZ Soluções Contábeis. Todos os direitos reservados.</p>
+            <div class="mt-4 md:mt-0 space-x-4">
+                <a href="admin.html" class="hover:text-white">Admin</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const apiKey = "eficazz_api_base";
+        const defaultApi = "http://localhost:3000";
+        const API_BASE = (() => {
+            const saved = localStorage.getItem(apiKey);
+            if (saved) return saved;
+            return window.location.origin === "null" ? defaultApi : "";
+        })();
+
+        const params = new URLSearchParams(window.location.search);
+        const postId = params.get("id");
+
+        const cover = document.getElementById("post-cover");
+        const titleEl = document.getElementById("post-title");
+        const categoryEl = document.getElementById("post-category");
+        const dateEl = document.getElementById("post-date");
+        const readEl = document.getElementById("post-read");
+        const contentEl = document.getElementById("post-content");
+        const errorEl = document.getElementById("post-error");
+
+        function formatDate(isoDate) {
+            if (!isoDate) return "";
+            return new Date(isoDate).toLocaleDateString("pt-BR", {
+                day: "2-digit",
+                month: "short",
+                year: "numeric"
+            });
+        }
+
+        function readingTime(text) {
+            const words = (text || "").trim().split(/\s+/).filter(Boolean).length;
+            const minutes = Math.max(1, Math.round(words / 200));
+            return `${minutes} min de leitura`;
+        }
+
+        function renderContent(text) {
+            const paragraphs = (text || "").split(/\n+/).filter(Boolean);
+            contentEl.innerHTML = "";
+            paragraphs.forEach((paragraph) => {
+                const p = document.createElement("p");
+                p.textContent = paragraph;
+                contentEl.appendChild(p);
+            });
+        }
+
+        if (!postId) {
+            errorEl.classList.remove("hidden");
+        } else {
+            fetch(`${API_BASE}/api/posts/${postId}`)
+                .then((response) => response.json())
+                .then((post) => {
+                    if (!post || post.error) throw new Error("Post invalido");
+                    if (post.image_url) {
+                        cover.innerHTML = `<img src="${post.image_url}" alt="${post.title}" class="w-full h-full object-cover">`;
+                    }
+                    categoryEl.textContent = post.category || "Geral";
+                    titleEl.textContent = post.title || "";
+                    dateEl.innerHTML = `<i class="fa-regular fa-calendar"></i> ${formatDate(post.published_at)}`;
+                    readEl.innerHTML = `<i class="fa-regular fa-clock"></i> ${readingTime(post.content)}`;
+                    renderContent(post.content || "");
+                })
+                .catch(() => {
+                    errorEl.classList.remove("hidden");
+                });
+        }
+    </script>
+</body>
+</html>

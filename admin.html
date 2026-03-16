@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin Blog | EFICAZZ</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        heading: ['Poppins', 'sans-serif']
+                    },
+                    colors: {
+                        brand: {
+                            dark: '#0f2f4f',
+                            primary: '#1c4e80',
+                            light: '#f0f9ff'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-700 min-h-screen">
+    <div class="max-w-4xl mx-auto px-6 py-16">
+        <div class="bg-white rounded-3xl shadow-2xl border border-gray-100 p-10">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+                <div>
+                    <p class="text-sm text-gray-400 uppercase tracking-widest">Painel Admin</p>
+                    <h1 class="font-heading text-3xl font-bold text-brand-dark">Blog EFICAZZ</h1>
+                </div>
+                <button id="logout-btn" class="hidden bg-brand-dark text-white px-6 py-3 rounded-xl font-bold">Sair</button>
+            </div>
+
+            <div id="status" class="mt-6 text-sm text-gray-500"></div>
+
+            <div id="login-box" class="mt-8 bg-gray-50 border border-gray-100 p-6 rounded-2xl">
+                <h2 class="font-heading text-xl font-bold text-brand-dark mb-4">Login</h2>
+                <form id="login-form" class="grid md:grid-cols-2 gap-4">
+                    <input name="email" type="email" placeholder="E-mail" class="px-4 py-3 rounded-xl border border-gray-200" required>
+                    <input name="password" type="password" placeholder="Senha" class="px-4 py-3 rounded-xl border border-gray-200" required>
+                    <button class="md:col-span-2 bg-brand-primary text-white px-6 py-3 rounded-xl font-bold" type="submit">Entrar</button>
+                </form>
+            </div>
+
+            <div id="editor-box" class="hidden mt-10">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-6">
+                    <h2 id="editor-title" class="font-heading text-2xl font-bold text-brand-dark">Novo Post</h2>
+                    <button id="reset-form" class="hidden bg-gray-100 text-gray-600 px-4 py-2 rounded-xl font-bold">Cancelar edicao</button>
+                </div>
+                <form id="post-form" class="space-y-4">
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input name="title" type="text" placeholder="Titulo" class="px-4 py-3 rounded-xl border border-gray-200" required>
+                        <select id="category-select" class="px-4 py-3 rounded-xl border border-gray-200 bg-white">
+                            <option value="">Selecione uma categoria</option>
+                        </select>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input id="category-new" type="text" placeholder="Nova categoria (opcional)" class="px-4 py-3 rounded-xl border border-gray-200">
+                        <button id="category-add" class="bg-brand-dark text-white px-6 py-3 rounded-xl font-bold" type="button">Adicionar categoria</button>
+                    </div>
+                    <textarea name="excerpt" rows="3" placeholder="Resumo" class="w-full px-4 py-3 rounded-xl border border-gray-200"></textarea>
+                    <textarea name="content" rows="10" placeholder="Conteudo" class="w-full px-4 py-3 rounded-xl border border-gray-200" required></textarea>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <input name="published_at" type="date" class="px-4 py-3 rounded-xl border border-gray-200">
+                        <input name="image" type="file" accept="image/*" class="px-4 py-3 rounded-xl border border-gray-200 bg-white">
+                    </div>
+                    <button id="submit-post" class="bg-brand-primary text-white px-6 py-3 rounded-xl font-bold" type="submit">Publicar</button>
+                </form>
+
+                <div class="mt-12">
+                    <h3 class="font-heading text-xl font-bold text-brand-dark mb-4">Posts Publicados</h3>
+                    <div id="posts-list" class="space-y-3"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE = window.location.origin;
+        const tokenKey = "eficazz_blog_token";
+        const categoriesKey = "eficazz_blog_categories";
+        const statusEl = document.getElementById("status");
+        const loginBox = document.getElementById("login-box");
+        const editorBox = document.getElementById("editor-box");
+        const logoutBtn = document.getElementById("logout-btn");
+        const categorySelect = document.getElementById("category-select");
+        const categoryNewInput = document.getElementById("category-new");
+        const categoryAddBtn = document.getElementById("category-add");
+        const postsList = document.getElementById("posts-list");
+        const editorTitle = document.getElementById("editor-title");
+        const resetFormBtn = document.getElementById("reset-form");
+        const submitPostBtn = document.getElementById("submit-post");
+        let editingPostId = null;
+        let cachedPosts = [];
+
+        function setStatus(message, tone = "info") {
+            statusEl.textContent = message;
+            statusEl.className = tone === "error" ? "mt-6 text-sm text-red-600" : "mt-6 text-sm text-gray-500";
+        }
+
+        function setAuthed(isAuthed) {
+            loginBox.classList.toggle("hidden", isAuthed);
+            editorBox.classList.toggle("hidden", !isAuthed);
+            logoutBtn.classList.toggle("hidden", !isAuthed);
+        }
+
+        function getToken() {
+            return localStorage.getItem(tokenKey);
+        }
+
+        function loadCategories() {
+            const stored = localStorage.getItem(categoriesKey);
+            if (!stored) return [];
+            try {
+                return JSON.parse(stored) || [];
+            } catch (error) {
+                return [];
+            }
+        }
+
+        function saveCategories(categories) {
+            localStorage.setItem(categoriesKey, JSON.stringify(categories));
+        }
+
+        function renderCategories(categories) {
+            categorySelect.innerHTML = "<option value=\"\">Selecione uma categoria</option>";
+            categories.forEach((category) => {
+                const option = document.createElement("option");
+                option.value = category;
+                option.textContent = category;
+                categorySelect.appendChild(option);
+            });
+        }
+
+        function addCategory(category) {
+            const trimmed = category.trim();
+            if (!trimmed) return;
+            const categories = loadCategories();
+            if (!categories.includes(trimmed)) {
+                categories.push(trimmed);
+                categories.sort((a, b) => a.localeCompare(b, "pt-BR"));
+                saveCategories(categories);
+                renderCategories(categories);
+            }
+            categorySelect.value = trimmed;
+        }
+
+        function setFormMode(isEditing) {
+            editorTitle.textContent = isEditing ? "Editar Post" : "Novo Post";
+            submitPostBtn.textContent = isEditing ? "Salvar Alteracoes" : "Publicar";
+            resetFormBtn.classList.toggle("hidden", !isEditing);
+        }
+
+        function resetForm() {
+            const form = document.getElementById("post-form");
+            form.reset();
+            editingPostId = null;
+            setFormMode(false);
+        }
+
+        function renderPostsList(posts) {
+            postsList.innerHTML = "";
+            if (!posts.length) {
+                postsList.innerHTML = "<p class=\"text-sm text-gray-400\">Nenhum post ainda.</p>";
+                return;
+            }
+
+            posts.forEach((post) => {
+                const item = document.createElement("div");
+                item.className = "bg-gray-50 border border-gray-100 rounded-2xl p-4 flex flex-col md:flex-row md:items-center md:justify-between gap-4";
+                item.innerHTML = `
+                    <div>
+                        <p class="font-bold text-brand-dark">${post.title}</p>
+                        <p class="text-xs text-gray-400">${post.category || "Sem categoria"}</p>
+                    </div>
+                    <div class="flex gap-3">
+                        <button data-action="edit" data-id="${post.id}" class="px-4 py-2 rounded-xl bg-brand-primary text-white font-bold">Editar</button>
+                        <button data-action="delete" data-id="${post.id}" class="px-4 py-2 rounded-xl bg-red-100 text-red-600 font-bold">Excluir</button>
+                    </div>
+                `;
+                postsList.appendChild(item);
+            });
+        }
+
+        async function loadPosts() {
+            try {
+                const response = await fetch(`${API_BASE}/api/posts`);
+                if (!response.ok) return;
+                const data = await response.json();
+                cachedPosts = Array.isArray(data) ? data : [];
+                renderPostsList(cachedPosts);
+            } catch (error) {
+                return;
+            }
+        }
+
+        async function syncCategoriesFromApi() {
+            try {
+                const response = await fetch(`${API_BASE}/api/posts`);
+                if (!response.ok) return;
+                const data = await response.json();
+                const categories = Array.isArray(data)
+                    ? data
+                        .map((post) => post.category)
+                        .filter((category) => Boolean(category))
+                    : [];
+                const unique = Array.from(new Set(categories));
+                if (unique.length) {
+                    const merged = Array.from(new Set([...loadCategories(), ...unique]));
+                    merged.sort((a, b) => a.localeCompare(b, "pt-BR"));
+                    saveCategories(merged);
+                    renderCategories(merged);
+                }
+            } catch (error) {
+                return;
+            }
+        }
+
+        categoryAddBtn.addEventListener("click", () => {
+            addCategory(categoryNewInput.value);
+            categoryNewInput.value = "";
+        });
+
+        resetFormBtn.addEventListener("click", () => {
+            resetForm();
+        });
+
+        document.getElementById("login-form").addEventListener("submit", async (event) => {
+            event.preventDefault();
+            setStatus("Entrando...");
+
+            const form = event.target;
+            const payload = {
+                email: form.email.value,
+                password: form.password.value
+            };
+
+            try {
+                const response = await fetch(`${API_BASE}/api/login`, {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify(payload)
+                });
+
+                const data = await response.json();
+                if (!response.ok) {
+                    throw new Error(data.error || "Credenciais invalidas.");
+                }
+                localStorage.setItem(tokenKey, data.token);
+                setAuthed(true);
+                setStatus("Login realizado.");
+                form.reset();
+            } catch (error) {
+                setStatus(error.message || "Erro ao fazer login.", "error");
+            }
+        });
+
+        document.getElementById("post-form").addEventListener("submit", async (event) => {
+            event.preventDefault();
+            setStatus("Publicando...");
+
+            const form = event.target;
+            const selectedCategory = categoryNewInput.value.trim() || categorySelect.value;
+            const formData = new FormData();
+            formData.append("title", form.title.value);
+            formData.append("category", selectedCategory);
+            formData.append("excerpt", form.excerpt.value);
+            formData.append("content", form.content.value);
+            formData.append("published_at", form.published_at.value);
+
+            if (form.image.files[0]) {
+                formData.append("image", form.image.files[0]);
+            }
+
+            try {
+                const endpoint = editingPostId
+                    ? `${API_BASE}/api/posts/${editingPostId}`
+                    : `${API_BASE}/api/posts`;
+                const response = await fetch(endpoint, {
+                    method: editingPostId ? "PUT" : "POST",
+                    headers: { Authorization: `Bearer ${getToken()}` },
+                    body: formData
+                });
+
+                if (!response.ok) {
+                    const payload = await response.json();
+                    throw new Error(payload.error || "Erro ao publicar.");
+                }
+
+                setStatus(editingPostId ? "Post atualizado com sucesso." : "Post publicado com sucesso.");
+                if (selectedCategory) {
+                    addCategory(selectedCategory);
+                }
+                resetForm();
+                loadPosts();
+            } catch (error) {
+                setStatus(error.message || "Erro ao publicar.", "error");
+            }
+        });
+
+        postsList.addEventListener("click", async (event) => {
+            const button = event.target.closest("button");
+            if (!button) return;
+            const action = button.dataset.action;
+            const postId = button.dataset.id;
+            const post = cachedPosts.find((item) => String(item.id) === String(postId));
+
+            if (action === "edit" && post) {
+                const form = document.getElementById("post-form");
+                form.title.value = post.title || "";
+                form.excerpt.value = post.excerpt || "";
+                form.content.value = post.content || "";
+                form.published_at.value = post.published_at ? post.published_at.slice(0, 10) : "";
+                if (post.category) {
+                    addCategory(post.category);
+                }
+                editingPostId = post.id;
+                setFormMode(true);
+                setStatus("Editando post.");
+            }
+
+            if (action === "delete" && postId) {
+                const confirmed = window.confirm("Deseja excluir este post?");
+                if (!confirmed) return;
+                try {
+                    const response = await fetch(`${API_BASE}/api/posts/${postId}`, {
+                        method: "DELETE",
+                        headers: { Authorization: `Bearer ${getToken()}` }
+                    });
+                    if (!response.ok) {
+                        const payload = await response.json();
+                        throw new Error(payload.error || "Erro ao excluir.");
+                    }
+                    setStatus("Post excluido.");
+                    loadPosts();
+                } catch (error) {
+                    setStatus(error.message || "Erro ao excluir.", "error");
+                }
+            }
+        });
+
+        logoutBtn.addEventListener("click", () => {
+            localStorage.removeItem(tokenKey);
+            setAuthed(false);
+            setStatus("Sessao encerrada.");
+        });
+
+        renderCategories(loadCategories());
+        syncCategoriesFromApi();
+        loadPosts();
+        setAuthed(Boolean(getToken()));
+    </script>
+</body>
+</html>

@@ -35,7 +35,18 @@
 
     <style>
         .input-premium {
-            @apply w-full bg-gray-50 border border-gray-200 p-4 rounded-xl outline-none focus:border-brand-primary focus:bg-white focus:ring-4 focus:ring-brand-primary/5 transition-all duration-300;
+            width: 100%;
+            background-color: #f9fafb;
+            border: 1px solid #e5e7eb;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            outline: none;
+            transition: all 300ms ease;
+        }
+        .input-premium:focus {
+            border-color: #1c4e80;
+            background-color: #ffffff;
+            box-shadow: 0 0 0 4px rgba(28, 78, 128, 0.05);
         }
         .gradient-bg {
             background: linear-gradient(135deg, #0f2f4f 0%, #1c4e80 100%);
@@ -59,14 +70,14 @@
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center space-x-3 cursor-pointer">
                 <img src="../img/EFICAZ SIMBOLO AZUL.png" alt="Eficazz Logo" class="h-10" onerror="this.src='https://via.placeholder.com/40x40/1c4e80/ffffff?text=E'">
-                <span class="font-heading font-bold text-brand-dark text-2xl tracking-tight uppercase">EFICAZZ</span>
+                <span class="font-heading font-bold text-brand-dark text-2xl tracking-tight">EFICAZZ</span>
             </div>
             <nav class="hidden md:flex space-x-8 font-medium items-center">
                 <a href="index.html" class="text-gray-500 hover:text-brand-primary transition">Início</a>
                 <a href="sobre.html" class="text-gray-500 hover:text-brand-primary transition">Sobre</a>
                 <a href="servicos.html" class="text-gray-500 hover:text-brand-primary transition">Serviços</a>
                 <a href="blog.html" class="text-gray-500 hover:text-brand-primary transition">Blog</a>
-                <a href="contato.html" class="text-brand-primary font-semibold border-b-2 border-brand-primary">Contato</a>
+                <a href="contato.html" class="bg-brand-primary text-white px-6 py-2 rounded-full shadow-lg hover:shadow-brand-primary/50 hover:-translate-y-0.5 transition-all">Contato <i class="fa-solid fa-arrow-right ml-2 text-sm"></i></a>
             </nav>
         </div>
     </header>
@@ -95,8 +106,8 @@
                     <div>
                         <h3 class="font-heading font-bold text-brand-dark text-xl mb-2">João Pessoa - PB</h3>
                         <p class="text-gray-500 leading-relaxed">
-                            Av. Pres. Epitácio Pessoa, 753<br>
-                            Edf. Central Park, Sala 1210
+                            Av. Epitacio Pessoa, 753, Edf. Central Park, Sala 1210<br>
+                            João Pessoa - PB, 58030-000
                         </p>
                     </div>
                 </div>
@@ -108,7 +119,14 @@
                     <div>
                         <h3 class="font-heading font-bold text-brand-dark text-xl mb-2">Canais Digitais</h3>
                         <p class="text-gray-500 mb-4">(83) 99962-2071</p>
-                        <a href="https://wa.me/5583999622071" class="text-green-600 font-bold hover:underline">Iniciar conversa agora →</a>
+                        <div class="flex items-center gap-3">
+                            <a href="https://wa.me/5583999622071" class="w-12 h-12 rounded-full bg-green-50 text-green-600 flex items-center justify-center text-xl hover:bg-green-100 transition-colors" aria-label="WhatsApp">
+                                <i class="fa-brands fa-whatsapp"></i>
+                            </a>
+                            <a href="https://www.instagram.com/eficazzcontabilidade/" target="_blank" rel="noopener" class="w-12 h-12 rounded-full bg-pink-50 text-pink-500 flex items-center justify-center text-xl hover:bg-pink-100 transition-colors" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
@@ -154,7 +172,7 @@
                         <div class="grid md:grid-cols-2 gap-5">
                             <div class="space-y-2">
                                 <label class="text-sm font-bold text-brand-dark ml-1">WhatsApp</label>
-                                <input type="tel" placeholder="(83) 99999-9999" class="input-premium" required>
+                                <input type="tel" placeholder="(83) 99962-2071" class="input-premium" required>
                             </div>
                             <div class="space-y-2">
                                 <label class="text-sm font-bold text-brand-dark ml-1">E-mail Profissional</label>
@@ -181,13 +199,68 @@
         </div>
     </section>
 
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-5" data-aos="fade-right">
+                <span class="text-brand-primary font-bold tracking-wider uppercase text-sm">Instagram</span>
+                <h2 class="font-heading text-3xl md:text-4xl font-bold text-brand-dark mt-3 mb-4">
+                    Acompanhe nossos conteudos
+                </h2>
+                <p class="text-gray-500 mb-8">
+                    Veja dicas, bastidores e atualizacoes contabeis direto do nosso perfil.
+                </p>
+                <div class="flex items-center gap-4">
+                    <a href="https://www.instagram.com/eficazzcontabilidade/" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-brand-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-brand-dark transition">
+                        <i class="fa-brands fa-instagram"></i>
+                        Abrir perfil
+                    </a>
+                    <span class="text-sm text-gray-400">@eficazzcontabilidade</span>
+                </div>
+            </div>
+            <div class="lg:col-span-7" data-aos="fade-left">
+                <div class="bg-white rounded-[2.5rem] shadow-2xl border border-gray-100 overflow-hidden">
+                    <div class="bg-brand-dark/5 px-6 py-4 flex items-center justify-between">
+                        <div class="flex items-center gap-3 text-brand-dark">
+                            <i class="fa-brands fa-instagram text-xl text-pink-500"></i>
+                            <span class="font-bold">@eficazzcontabilidade</span>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 p-6 overflow-hidden">
+                        <iframe
+                            src="https://www.instagram.com/p/DVb1cKVD2y9/embed"
+                            height="420"
+                            style="border:0; overflow:hidden;"
+                            loading="lazy"
+                            scrolling="no"
+                            class="w-full rounded-2xl bg-white"></iframe>
+                        <iframe
+                            src="https://www.instagram.com/p/DUBlyEIDyPe/embed"
+                            height="420"
+                            style="border:0; overflow:hidden;"
+                            loading="lazy"
+                            scrolling="no"
+                            class="w-full rounded-2xl bg-white"></iframe>
+                        <iframe
+                            src="https://www.instagram.com/p/DU_hRtgj0XM/embed"
+                            height="420"
+                            style="border:0; overflow:hidden;"
+                            loading="lazy"
+                            scrolling="no"
+                            class="w-full rounded-2xl bg-white"></iframe>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
     <section class="py-24 bg-brand-light/50">
         <div class="max-w-7xl mx-auto px-6 text-center">
             <h2 class="font-heading text-3xl font-bold text-brand-dark mb-12">Onde Estamos</h2>
             
             <div class="rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white group">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.030638515783!2d-34.8722!3d-7.1234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zN8KwMDcnMjQuMiJTIDM0wrA1MicyMC4wIlc!5e0!3m2!1spt-BR!2sbr!4v1700000000000"
+                    src="https://www.google.com/maps?q=Eficazz+Solucoes+Contabeis+Joao+Pessoa&output=embed"
                     width="100%"
                     height="500"
                     style="border:0;"
@@ -199,14 +272,67 @@
         </div>
     </section>
 
-    <footer class="bg-brand-dark text-gray-400 py-12 text-center border-t border-white/5">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col items-center mb-8">
-                <img src="../img/EFICAZ SIMBOLO BRANCO.png" class="h-10 mb-4 brightness-0 invert" alt="Logo">
-                <p class="font-heading font-bold text-white text-xl uppercase tracking-widest">EFICAZZ</p>
+    <footer class="bg-brand-dark text-gray-300 pt-20 pb-10 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
+            <div>
+                <div class="flex items-center space-x-3 mb-6">
+                    <img src="../img/EFICAZ SIMBOLO BRANCO.png" class="h-8 brightness-0 invert" alt="Logo" onerror="this.src='https://via.placeholder.com/40x40/ffffff/0f2f4f?text=E'">
+                    <span class="font-heading font-bold text-white text-xl">EFICAZZ</span>
+                </div>
+                <p class="text-sm text-gray-400 mb-6 leading-relaxed">
+                    Contabilidade consultiva e estratégica focada no crescimento e na segurança jurídica da sua empresa.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://www.instagram.com/eficazzcontabilidade/" target="_blank" rel="noopener" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors"><i class="fa-brands fa-linkedin-in"></i></a>
+                </div>
             </div>
-            <p class="text-sm">© 2026 EFICAZZ Soluções Contábeis - CNPJ: 00.000.000/0000-00</p>
-            <p class="text-xs mt-2 uppercase tracking-widest opacity-50">Inteligência Contábil & Estratégia Empresarial</p>
+
+            <div>
+                <h4 class="font-heading font-bold text-white mb-6 uppercase tracking-wider text-sm">Institucional</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="index.html" class="hover:text-brand-light transition-colors">Início</a></li>
+                    <li><a href="sobre.html" class="hover:text-brand-light transition-colors">Quem Somos</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Soluções</a></li>
+                    <li><a href="blog.html" class="hover:text-brand-light transition-colors">Blog & Artigos</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold text-white mb-6 uppercase tracking-wider text-sm">Principais Serviços</h4>
+                <ul class="space-y-3 text-sm">
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Abertura de Empresa</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Troca de Contador</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Regularização de CNPJ</a></li>
+                    <li><a href="servicos.html" class="hover:text-brand-light transition-colors">Consultoria Tributária</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h4 class="font-heading font-bold text-white mb-6 uppercase tracking-wider text-sm">Fale Conosco</h4>
+                <ul class="space-y-4 text-sm">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot mt-1 text-brand-primary"></i>
+                        <span>Av. Epitacio Pessoa, 753, Edf. Central Park, Sala 1210<br>João Pessoa - PB, 58030-000</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-phone text-brand-primary"></i>
+                        <span>(83) 99962-2071</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fa-solid fa-envelope text-brand-primary"></i>
+                        <span>contato@eficazzcontabilidade.com.br</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+            <p>&copy; 2026 EFICAZZ Soluções Contábeis. Todos os direitos reservados.</p>
+            <div class="mt-4 md:mt-0 space-x-4">
+                <a href="admin.html" class="hover:text-white">Admin</a>
+            </div>
         </div>
     </footer>
 
